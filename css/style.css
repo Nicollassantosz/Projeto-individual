@@ -92,3 +92,14 @@ left: 44%;
 top: 30%;
 }
 
+.countdown-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.countdown {
+    font-size: 32px;
+    color: #333;
+}
+
