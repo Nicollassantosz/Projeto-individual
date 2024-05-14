@@ -22,22 +22,32 @@
 
 #text_navbar {
     flex: 1;
-    font-family: "Roboto", sans-serif
+    font-family: "Montserrat", sans-serif;
 }
 
 ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
+    background-color: green;
+    padding: 15px;
+
 }
 
 li {
     margin: 0 10px;
+    display: inline-block;
 }
 
-a {
+li a {
     text-decoration: none;
     color: white;
+    padding: 30px;
+}
+
+li a:hover{
+    background-color: rgb(0, 73, 0);
+    
 }
 
 .container {
@@ -92,10 +102,19 @@ left: 44%;
 top: 30%;
 }
 
+
+
+
+
+
 .countdown-container {
-    max-width: 600px;
-    margin: 50px auto;
+    display: inline-flex;
+    position: absolute;
+    left: 21%;
+    width: 700px;
     text-align: center;
+    top: 79%;
+    background-color: brown;
 }
 
 .countdown {

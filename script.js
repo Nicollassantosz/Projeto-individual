@@ -1,15 +1,15 @@
-// Data da próxima Copa do Mundo (exemplo: Qatar 2022 - 21 de novembro de 2022)
-const nextWorldCupDate = new Date("2026-06-11T00:00:00Z");
+// Data da próxima Copa do Mundo 2026
+var nextWorldCupDate = new Date("2026-06-11T00:00:00Z");
 
 function updateCountdown() {
-    const now = new Date();
-    const timeDiff = nextWorldCupDate - now;
+    var now = new Date();
+    var timeDiff = nextWorldCupDate - now;
 
     // Calcular dias, horas, minutos e segundos restantes
-    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+    var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
     // Atualizar o elemento HTML com a contagem regressiva
     document.getElementById("countdown").innerHTML = `Faltam ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos para a próxima Copa do Mundo!`;
