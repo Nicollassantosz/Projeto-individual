@@ -52,7 +52,7 @@ li a:hover{
 
 .container {
     width: 100%;
-    height: 450px;
+    height: 470px;
     position: relative;
     z-index: 0;
 }
@@ -110,15 +110,30 @@ top: 30%;
 .countdown-container {
     display: inline-flex;
     position: absolute;
-    left: 21%;
+    left: 24%;
     width: 700px;
     text-align: center;
-    top: 79%;
+    top: 82%;
     background-color: brown;
 }
 
 .countdown {
     font-size: 32px;
     color: #333;
+}
+
+.evento_popular{
+    height: 450px;
+    background-color: green;
+}
+
+.titulo_popular{ 
+    margin-top: 50px;
+    margin-left: 29%;
+    display: inline-flex;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    color: white;
 }
 
