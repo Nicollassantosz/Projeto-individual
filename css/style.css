@@ -2,10 +2,9 @@
 * {
     padding: 0;
     margin: 0;
-
 }
 
-.navbar {
+.navbar {   
     width: 100%;
     height: 65px;
     background-color: green;
@@ -14,8 +13,8 @@
 }
 
 #logonavbar {
-    width: 120px;
-    height: 60px;
+    width: 60px;
+    height: 30px;
     display: flex;
     margin-left: 40px;
 }
@@ -109,27 +108,65 @@ top: 30%;
 
 .countdown-container {
     display: inline-flex;
-    position: absolute;
-    left: 24%;
-    width: 700px;
+    position: relative;
     text-align: center;
-    top: 82%;
-    background-color: brown;
+    top: -15;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    justify-content: center;
+    align-items: center;
 }
 
 .countdown {
     font-size: 32px;
-    color: #333;
+    color:white;
+    flex-direction: column;
+    display: flex;
+    
 }
 
 .evento_popular{
-    height: 450px;
-    background-color: green;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 700px;
+    background: linear-gradient(73deg, #00b581 1%,  #0000b5 99%); 
+    flex-direction: row;
+    
 }
 
 .titulo_popular{ 
+    display: inline-flex;
+    margin-left: 40%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    color: white;
+}
+.retangulo{
+    width: 100%;
+}
+
+.containertext1{
+    display: flex;
+    position: absolute;
+    top: 120%;
+ left: 140px;
+height: 250px;
+width: 200px;
+background-color: white;
+}
+
+.container_moments{
+background-color: blue  ;
+    height: 460px;
+    position: relative;
+    flex-direction: row;
+}
+
+.titulo_moments{
     margin-top: 50px;
-    margin-left: 29%;
+    margin-left: 25%;
     display: inline-flex;
     text-align: center;
     font-family: "Montserrat", sans-serif;
@@ -137,3 +174,200 @@ top: 30%;
     color: white;
 }
 
+.text_moments{
+    display:inline-flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-top: 7%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color: brown;
+    justify-content: center;
+}
+
+#span_cowndown{
+    font-size: 15px;
+    justify-content: space-around;
+}
+
+.quadrado{
+    width: 80px;
+    height: 42px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: yellow;
+    border-radius: 10px;
+}
+
+.align{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_contador{
+
+    width: 100%;
+    height: 150px;
+    background-color: rgb(7, 10, 7);
+    border-top: 2px solid black;
+}
+
+
+
+
+.card {
+    display: flex;
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+   align-self: center;
+   margin: 2px;
+  }
+  
+  .front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    background-color: #f0f0f0; /* Cor de fundo da frente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    transform: rotateY(0deg);
+  }
+  
+  .back {
+    background-color: #d3d3d3; /* Cor de fundo do verso */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    transform: rotateY(180deg);
+  }
+  
+  .card:hover .front {
+    transform: rotateY(-180deg);
+  }
+  
+  .card:hover .back {
+    transform: rotateY(0deg);
+  }
+
+  .containervideo{
+    display: inline-flex;
+  margin-left: 7%;
+  margin-top: 1%;
+    height: 180px;
+    width: 300px;
+    flex-direction: row;
+  }
+
+
+
+
+  /* Copa 2026*/
+
+    .container_copa2026{
+        height: 600px;
+        width: 100%;
+        background-color: #00b581;
+    }
+
+    .img_copa2026{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url('C:/Users/Usuario/Documents/Site projeto individual/Projeto-individual/image/image.png');
+        background-position: top;
+        background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    }
+
+    .overlay_copa2026{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 2;
+    }
+
+    .text_copa2026 {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        z-index: 3;
+        width: 400px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    
+    .text_copa2026_1 {
+        position: absolute;
+        top: 35%;
+        left: 73%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        z-index: 3;
+        width: 400px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .text_copa2026_2 {
+        position: absolute;
+        top: 50%;
+        left: 23%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        z-index: 3;
+        width: 400px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+        
+    .text_copa2026_3 {
+        position: absolute;
+        top: 65%;
+        left: 73%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        z-index: 3;
+        width: 400px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .text_copa2026_4 {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        z-index: 3;
+        width: 400px;
+        font-family: "Montserrat", sans-serif;
+        text-decoration: none;
+        border: 2px solid green;
+    }
