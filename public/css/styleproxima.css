@@ -8,8 +8,8 @@
 
 .navbar {
     width: 100%;
-    height: 65px;
-    background-color: green;
+    height: 60px;
+    background: linear-gradient(180deg, #35b702  1%, #0000b5 99%);
     display: flex;
     align-items: center;
 }
@@ -30,7 +30,10 @@ ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
+    background: linear-gradient(180deg, #35b702  1%, #0000b5 99%);
     padding: 15px;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 14px;
 
 }
 
@@ -42,26 +45,28 @@ li {
 li a {
     text-decoration: none;
     color: white;
-    padding: 30px;
+    padding: 20px;
 }
 
 li a:hover {
-    background-color: rgb(0, 73, 0);
-
+   box-shadow:  0px 0px 10px 4px  yellow;
+   transition: 0.5s;
 }
 
 /* TITULO*/
 
-.titulo{
+.titulo {
     height: 100px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     font-family: "Montserrat", sans-serif;
+    font-size: 27px;
 }
 
-.subtitulo{
+
+.subtitulo {
     height: 70px;
     width: 100%;
     display: flex;
@@ -70,94 +75,104 @@ li a:hover {
     justify-content: space-evenly;
     font-family: "Montserrat", sans-serif;
 }
+
 /* SEÇÃO FASE DE GRUPOS */
-#fasedegrupos{
+#fasedegrupos {
     width: 100%;
     height: 320px;
     display: flex;
     flex-direction: row;
-    align-items: center;    
+    align-items: center;
     justify-content: space-evenly;
 }
 
-.texto_fasedegrupos{
+.texto_fasedegrupos {
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-family: "Montserrat", sans-serif;
 }
 
-.texto_fasedegrupos h1{
+.texto_fasedegrupos span {
     max-width: 400px;
+    font-size: 27px;
 }
 
-.texto_fasedegrupos p{
+.texto_fasedegrupos p {
     max-width: 400px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
-#fasedegrupos img{
+#fasedegrupos img {
     width: 380px;
     height: 250px;
 }
 
 
 /* SEÇÃO MATA MATA */
-#mata_mata{
+#mata_mata {
     width: 100%;
     height: 320px;
     display: flex;
     flex-direction: row;
-    align-items: center;    
+    align-items: center;
     justify-content: space-evenly;
 }
 
-.texto_mata_mata{
+.texto_mata_mata {
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-family: "Montserrat", sans-serif;
 }
 
-.texto_mata_mata h1{
+.texto_mata_mata span {
     max-width: 400px;
+    font-size: 27px;
 }
 
-.texto_mata_mata p{
+.texto_mata_mata p {
     max-width: 400px;
-    font-size: 24px;
+    font-size: 20px;
+
 }
 
 
-#mata_mata img{
+#mata_mata img {
     width: 380px;
     height: 250px;
 }
 
 
-.text_mata_mata{
-align-items: center;
-display: flex;
-flex-direction: column;
+.text_mata_mata {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+
 }
 
-.text_mata_mata p{
-max-width: 70%;
-font-size: 24px;
+.text_mata_mata p {
+    max-width: 70%;
+    font-size: 20px;
 }
+
 /* IMAGENS LOCAL E BANNER COPA  */
-.imgs_onde_copa{
+.imgs_onde_copa {
     margin-top: 5%;
-   height: 350px;
-   width: 100%;
-   display: flex;
-   justify-content: space-evenly;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.img_logo{
-width: 300px;
-height: 300px;
+.img_logo {
+    width: 300px;
+    height: 300px;
 }
 
-.img_local{
+.img_local {
     background-repeat: no-repeat;
     background-size: cover;
     width: 380px;
@@ -166,29 +181,28 @@ height: 300px;
 
 /* IMG DE ESTADIOS DE ABERTURA E FINAL DA COPA */
 .imgs_abertura_estadio {
-width: 100%;
-height: 200px;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .imgs_abertura_estadio img {
     width: 300px;
     height: 200px;
-    }
+}
 
-    .imgs_fechamento_estadio {
-        width: 100%;
-        height: 200px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        }
+.imgs_fechamento_estadio {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
-    .imgs_fechamento_estadio img {
-        width: 300px;
-        height: 200px;
-        }
+.imgs_fechamento_estadio img {
+    width: 300px;
+    height: 200px;
+}
 
-        

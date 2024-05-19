@@ -46,7 +46,7 @@ function escolher() {
             lista_copas.push(ano);
         }
         
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>A Copa do Mundo de 2022 foi realizada no Catar,a primeira vez que o torneio foi realizado no Oriente Médio realizada no final do ano, devido às altas temperaturas durante os meses de verão no Catar.<br>
         A competição contou com 32 equipes nacionais de futebol de todo o mundo, competindo em uma série de estádios modernos, muitos dos quais foram construídos especialmente para o evento.
@@ -72,7 +72,7 @@ function escolher() {
             lista_copas.push(ano);
         }
 
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>
         A Copa do Mundo de 2018 foi realizada na Rússia, contando com a participação de 32 equipes nacionais. O torneio foi marcado por jogos emocionantes e surpresas, desde eliminações precoces de favoritos até performances impressionantes de equipes menos cotadas.
@@ -101,7 +101,7 @@ function escolher() {
             lista_copas.push(ano);
         }
 
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>A Copa do Mundo de 2014 foi realizada no Brasil.
         A Copa do Mundo de 2014 foi realizada no Brasil.O evento ocorreu de 12 de junho a 13 de julho de 2014, em 12 cidades-sede diferentes, espalhadas por todo o país.
@@ -130,7 +130,7 @@ function escolher() {
         if(repetircopa2010 == 1){
             lista_copas.push(ano);
         }
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>
         A Copa do Mundo de 2010 foi realizada na África do Sul,sendo a primeira vez que o continente africano sediou o torneio, em 9 cidades diferentes.Foi um momento histórico para o futebol africano, e deixou um legado importante para o continente.
@@ -160,7 +160,7 @@ function escolher() {
             lista_copas.push(ano);
         }
 
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE de ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE de ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>
         A Copa do Mundo de 2006 foi realizada na Alemanha e contou com a participação de 32 seleções.O torneio foi um grande sucesso, com grande participação do público e um alto nível de competitividade. O torneio também foi importante para o desenvolvimento do futebol mundial, ajudando a popularizar o esporte em novos países.
@@ -192,7 +192,7 @@ function escolher() {
             lista_copas.push(ano);
         }
 
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>
         A Copa do Mundo de 2002 foi um evento memorável que uniu a Coreia do Sul e o Japão como co-sedes, marcando a primeira vez que o torneio foi realizado em território asiático.A Coreia do Sul e o Japão se destacaram como anfitriões impecáveis, organizando um evento memorável que ficou marcado na história do futebol mundial.
@@ -220,7 +220,7 @@ function escolher() {
             lista_copas.push(ano);
         }
 
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>
         A Copa do Mundo de 1998, realizada na França, foi um evento memorável que marcou a história do futebol.A bola utilizada no torneio foi a Adidas Tricolore. A bandeira tricolor e o galo gaulês, símbolos tradicionais da França, foram usados como inspiração para o design mais, de vinte rascunhos foram propostos pela equipe de design da Adidas antes que a versão definitiva fosse aprovada.
@@ -249,7 +249,7 @@ function escolher() {
         if(repetircopa1994 == 1){
             lista_copas.push(ano);
         }
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>
         A Copa do Mundo de 1994, realizada nos Estados Unidos, um país tradicionalmente dominado por esportes como o beisebol e o basquete. A escolha dos EUA como sede foi um grande desafio para a FIFA, que precisou trabalhar para popularizar o futebol em um país com pouca tradição no esporte.
@@ -278,7 +278,7 @@ function escolher() {
             lista_copas.push(ano);
         }
 
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
          <p>
          A Copa do Mundo de 1990,foi outro evento memorável que marcou a história do futebol.
@@ -307,7 +307,7 @@ function escolher() {
         if(repetircopa1986 == 1){
             lista_copas.push(ano);
         }
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>
         A Copa do Mundo de 1986, aconteceu na Itália, um país com grande tradição no futebol e que já havia sediado duas Copas do Mundo anteriormente (em 1934 e 1966). A escolha da Itália como sede gerou grande expectativa e entusiasmo entre os fãs do esporte.
@@ -335,7 +335,7 @@ function escolher() {
         if(repetircopa1982 == 1){
             lista_copas.push(ano);
         }
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>
         A Copa do Mundo de 1982 aconteceu na Espanha, um país com grande tradição no futebol e que já havia sediado a Copa do Mundo em 1966.Foi a primeira a contar com 24 seleções, entre elas várias estreantes.
@@ -363,7 +363,7 @@ function escolher() {
             lista_copas.push(ano);
         }
     
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>
         A Copa do Mundo de 1978 foi realizada na Argentina entre 30 de maio e 25 de junho, em um contexto histórico e social turbulento. Apesar das tensões políticas e da repressão militar no país, o torneio foi marcado por grandes momentos e pela consagração da seleção argentina como campeã pela primeira vez.
@@ -392,7 +392,7 @@ function escolher() {
             lista_copas.push(ano);
         }
 
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>
         A Copa do Mundo de 1974, realizada na Alemanha Ocidental, que já havia sediado a Copa do Mundo em 1954<br>
@@ -421,7 +421,7 @@ function escolher() {
         if(repetircopa1970 == 1){
             lista_copas.push(ano);
         }
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>A Copa do Mundo de 1970, realizada no México, o país já havia sediado a Copa do Mundo em 1950 e era conhecido por sua paixão pelo futebol.</p>
     
@@ -449,7 +449,7 @@ function escolher() {
             lista_copas.push(ano);
         }
 
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>
         A Copa do Mundo de 1966 foi realizada na Inglaterra, que já havia tentado sediar o torneio em outras ocasiões, mas finalmente conseguiu em 1966. <br>
@@ -478,7 +478,7 @@ A final foi disputada em Londres, no Estádio de Wembley, e é lembrada pelo pol
             lista_copas.push(ano);
         }
 
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>A Copa do Mundo de 1962 foi realizada no Chile.O país já havia tentado sediar o torneio em 1950, mas finalmente conseguiu em 1962.Apesar do devastador terremoto de 1960, o Chile, liderado por Carlos Dittborn, perseverou para sediar a Copa do Mundo, demonstrando coragem e determinação, reconhecendo o evento como uma oportunidade crucial para reconstruir o país e sua moral.<br>
         </p>
@@ -505,7 +505,7 @@ A final foi disputada em Londres, no Estádio de Wembley, e é lembrada pelo pol
         if(repetircopa1958 == 1){
             lista_copas.push(ano);
         }
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>A Copa do Mundo FIFA de 1958 foi a sexta edição da Copa do Mundo FIFA de Futebol, sediado na Suécia.O país já havia tentado sediar o torneio em 1938, mas finalmente conseguiu em 1958.
         </p>
@@ -535,7 +535,7 @@ A final foi disputada em Londres, no Estádio de Wembley, e é lembrada pelo pol
             lista_copas.push(ano);
         }
 
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>
         A Copa do Mundo FIFA de 1954, com dezesseis seleções nacionais.Em comemoração ao 50º aniversário da FIFA, o evento foi sediado na Suíça, onde encontra-se a sede da FIFA; o país foi oficialmente selecionado como anfitrião em julho de 1946. 
@@ -566,7 +566,7 @@ A final foi disputada em Londres, no Estádio de Wembley, e é lembrada pelo pol
             lista_copas.push(ano);
         }
 
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>A Copa do Mundo de 1950, realizada no Brasil, anfitrião da competição pela primeira vez.Naquela época, a Europa havia acabado de passar por duas Guerras Mundiais e estava em reconstrução.Com todos os países europeus sem condições, a FIFA optou pela realização da IV Copa do Mundo no Brasil </p>
     
@@ -584,7 +584,7 @@ A final foi disputada em Londres, no Estádio de Wembley, e é lembrada pelo pol
         </p>
         <img src="https://www.lance.com.br/galerias/wp-content/uploads/2020/10/Ademir-Menezes.jpg" alt="Banner copa 2022"> `
         container_resumo4.innerHTML += `
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU-VCL8xEwOGH1UFaDk8_F-axh8OHtnb8gcNzdmM2NFg&s" alt="Banner copa 2022"> 
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU-VCL8xEwOGspanUFaDk8_F-axh8OHtnb8gcNzdmM2NFg&s" alt="Banner copa 2022"> 
         <p>
          Foi nessa Copa que os jogadores passaram a usar números nas costas.<br>
          Até 1950, os ingleses esnobavam a Copa do Mundo, alegando sua superioridade em relação aos outros países. Nesse ano, concordaram em vir ao Brasil e… não passaram da primeira fase.
@@ -595,7 +595,7 @@ A final foi disputada em Londres, no Estádio de Wembley, e é lembrada pelo pol
             lista_copas.push(ano);
         }
 
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>
         A Copa do Mundo de 1938 foi a terceira edição do torneio e aconteceu na França.<br>
@@ -626,7 +626,7 @@ A final foi disputada em Londres, no Estádio de Wembley, e é lembrada pelo pol
         if(repetircopa1934 == 1){
             lista_copas.push(ano);
         }
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p>
         A Copa do Mundo de 1934 foi a segunda edição do torneio e aconteceu na Itália
@@ -655,7 +655,7 @@ A final foi disputada em Londres, no Estádio de Wembley, e é lembrada pelo pol
         if(repetircopa1930 == 1){
             lista_copas.push(ano);
         }
-        container_titulo_copa.innerHTML += `<h1>COPA DO MUNDO DE ${ano}</h1>`
+        container_titulo_copa.innerHTML += `<span>COPA DO MUNDO DE ${ano}</span>`
         container_resumo1.innerHTML += `
         <p> 
         Copa do Mundo FIFA de 1930  foi a primeira edição deste evento esportivo, que passou a ser organizado quadrienalmente pela FIFA. A competição foi disputada no Uruguai, já que o mesmo estava comemorando o centenário de sua primeira constituição.
