@@ -584,7 +584,7 @@ A final foi disputada em Londres, no Estádio de Wembley, e é lembrada pelo pol
         </p>
         <img src="https://www.lance.com.br/galerias/wp-content/uploads/2020/10/Ademir-Menezes.jpg" alt="Banner copa 2022"> `
         container_resumo4.innerHTML += `
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU-VCL8xEwOGspanUFaDk8_F-axh8OHtnb8gcNzdmM2NFg&s" alt="Banner copa 2022"> 
+        <img src="https://s2.glbimg.com/EZKP5Kzikxo-HyHpm4hDeDKQb7ThB12M2s0GhOvStWk1h_9JRMxFLfsnsH0O6JkN/e.glbimg.com/og/ed/f/original/2013/09/03/1950_-_inglaterra_billy_wright_eua_ed_mcilvenny_getty.jpg" alt="Banner copa 2022"> 
         <p>
          Foi nessa Copa que os jogadores passaram a usar números nas costas.<br>
          Até 1950, os ingleses esnobavam a Copa do Mundo, alegando sua superioridade em relação aos outros países. Nesse ano, concordaram em vir ao Brasil e… não passaram da primeira fase.

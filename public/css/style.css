@@ -9,9 +9,12 @@
 .navbar {
     width: 100%;
     height: 60px;
-    background: linear-gradient(180deg, #35b702  1%, #0000b5 99%);
+ background: linear-gradient(180deg, #35b702  1%, #00b567 99%); 
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 3;
 }
 
 #logonavbar {
@@ -30,7 +33,7 @@ ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    background: linear-gradient(180deg, #35b702  1%, #0000b5 99%);
+    background: linear-gradient(180deg, #35b702  1%, #00b567 99%); 
     padding: 15px;
     text-shadow: 2px 2px 4px #000000;
     font-size: 14px;
@@ -74,6 +77,7 @@ li a:hover {
     z-index: -1;
     background-position: top;
     overflow: hidden;
+    margin-top: 40px;
 }
 
 
@@ -84,7 +88,7 @@ li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
     z-index: 2;
 }
 
@@ -144,7 +148,7 @@ li a:hover {
     display: flex;
     justify-content: center;
     height: 480px;
-    background: linear-gradient(180deg, #35b702  1%,rgb(34, 139, 34) 99%);
+    background: rgb(255, 255, 255);
     flex-direction: column;
     align-items: center;
 
@@ -155,14 +159,14 @@ li a:hover {
     display: inline-flex;
     font-family: "Montserrat", sans-serif;
     font-size: 28px;
-    color: white;
+    color: black;
     padding-bottom: 10px;
 
 }
 
 .retangulo {
     width: 100%;
-    text-shadow: 2px 2px 4px #000000
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .containertext1 {
@@ -185,13 +189,13 @@ li a:hover {
     font-family: "Montserrat", sans-serif;
     font-size: 28px;
     color: white;
-       background-color: rgb(34, 139, 34);
+    background: rgb(21, 94, 21);
     width: 100%;
     
 }
 
 .container_moments {
-    background: linear-gradient(180deg, rgb(34, 139, 34)  1%, #3CB35A 99%);
+    background: rgb(21, 94, 21);
     height: 120px;
   display: flex;
   justify-content: space-evenly
@@ -204,7 +208,7 @@ li a:hover {
     flex-direction: row;
     justify-content: space-evenly;
     height: 250px;
-    background: linear-gradient(180deg,#3CB35A 5%, #0000b5 99%);
+    background: rgb(21, 94, 21);
     
 }
 
@@ -215,7 +219,7 @@ li a:hover {
     flex-direction: row;
     justify-content: space-around;
     display: flex;
-    border: 3px solid #F6E35D;
+    border: 3px solid green;
     border-radius: 5px;
 }
 
@@ -227,8 +231,6 @@ li a:hover {
     align-self: center;
     justify-content: space-around;
 }
-
-
 
 
 
@@ -247,7 +249,7 @@ li a:hover {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    border: 2px solid #0000b5;
+    border: 2px solid green;
 }
 
 .align {
@@ -260,8 +262,7 @@ li a:hover {
 
     width: 100%;
     height: 130px;
-    background: linear-gradient(0deg, #35b702  1%, #0000b5 99%);
-    border-top: 2px solid #F6E35D;
+    background: rgb(21, 94, 21);
 }
 
 
@@ -292,6 +293,7 @@ li a:hover {
     perspective: 1000px;
     align-self: center;
     margin: 2px;
+    margin-left: 15px;
     
 }
 
@@ -305,7 +307,7 @@ li a:hover {
     font-weight: bold;
     transform: rotateY(0deg);
     text-shadow: 1px 1px 1px black;
-    border: 3px solid #F6E35D;
+    border: 3px solid black;
     border-radius: 10px;
 }
 
@@ -318,7 +320,7 @@ li a:hover {
     transform: rotateY(180deg);
     text-shadow: 20px 20px 20px #000000;
     font-family: "Montserrat", sans-serif;
-    border: 3px solid #0000b5;
+    border: 3px solid black;
     border-radius: 10px;
 }
 
@@ -331,7 +333,7 @@ li a:hover {
     font-weight: bold;
     transform: rotateY(0deg);
     text-shadow: 1px 1px 1px black;
-    border: 3px solid #F6E35D;
+    border: 3px solid black;
     border-radius: 10px;
 }
 
@@ -344,7 +346,7 @@ li a:hover {
     transform: rotateY(180deg);
     text-shadow: 20px 20px 20px #000000;
     font-family: "Montserrat", sans-serif;
-    border: 3px solid #0000b5;
+    border: 3px solid black;
     border-radius: 10px;
 
 }
@@ -358,7 +360,7 @@ li a:hover {
     font-weight: bold;
     transform: rotateY(0deg);
     text-shadow: 1px 1px 1px black;
-    border: 3px solid #F6E35D;
+    border: 3px solid black;
     border-radius: 10px;
 }
 
@@ -371,7 +373,7 @@ li a:hover {
     transform: rotateY(180deg);
     text-shadow: 20px 20px 20px #000000;
     font-family: "Montserrat", sans-serif;
-    border: 3px solid #0000b5;
+    border: 3px solid black;
     border-radius: 10px;
 }
 
@@ -384,7 +386,7 @@ li a:hover {
     font-weight: bold;
     transform: rotateY(0deg);
     text-shadow: 1px 1px 1px black;
-    border: 3px solid #F6E35D;
+    border: 3px solid black;
     border-radius: 10px;
 }
 
@@ -397,7 +399,7 @@ li a:hover {
     transform: rotateY(180deg);
     text-shadow: 20px 20px 20px #000000;
     font-family: "Montserrat", sans-serif;
-    border: 3px solid #0000b5;
+    border: 3px solid black;
     border-radius: 10px;
 }
 

@@ -9,9 +9,12 @@
 .navbar {
     width: 100%;
     height: 60px;
-    background: linear-gradient(180deg, #35b702  1%, #0000b5 99%);
+    background: linear-gradient(180deg, #35b702  1%, #00b567 99%); 
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 3;
 }
 
 #logonavbar {
@@ -30,7 +33,7 @@ ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    background: linear-gradient(180deg, #35b702  1%, #0000b5 99%);
+    background: linear-gradient(180deg, #35b702  1%, #00b567 99%); 
     padding: 15px;
     text-shadow: 2px 2px 4px #000000;
     font-size: 14px;
@@ -49,10 +52,9 @@ li a {
 }
 
 li a:hover {
-   box-shadow:  0px 0px 10px 4px  yellow;
-   transition: 0.5s;
+    box-shadow:  0px 0px 10px 4px  yellow;
+    transition: 0.5s;
 }
-
 /* TITULO*/
 
 .titulo {
