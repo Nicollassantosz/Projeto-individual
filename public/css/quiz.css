@@ -12,7 +12,7 @@ body {
     background-size: cover;
     background-position: center;
     background-color:  rgb(21, 94, 21);
-    color: white;
+    color: rgb(21, 94, 21);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -22,8 +22,8 @@ body {
 }
 
 #img_taca {
-    width: 300px;
-    height: 200px;
+    width: 220px;
+    height: 140px;
 
   
 }
@@ -32,17 +32,17 @@ button {
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: white;
     width: 900px;
-    max-width: 800px;
-    border: 2px solid white;
+    border: 2px solid rgb(21, 94, 21);
     border-radius: 6px;
     padding: 16px;
     box-shadow: 0 0 2px 2px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    height: 400px;
 }
 
 .perguntas_container {
@@ -72,15 +72,15 @@ button {
 }
 
 .button {
-    background-color: rgb(22, 84, 21);
-    color: #ffffff;
+    background-color: white;
+    border: 3px solid rgb(27, 121, 27);
+    color: rgb(21, 94, 21);
     font-size: 16px;
-    font-weight: bold;
-    border: 0;
     border-radius: 6px;
     height: 48px;
-    padding: 0 32px;
+    padding: 0 28px;
     transition: filter 0.2s;
+    font-family: "Montserrat", sans-serif;
 }
 
 .button:not(:disabled):hover {
@@ -121,7 +121,7 @@ button {
     font-weight: bold;
 }
 .voltar {
-    width: 35px;
+    width: 90px;
     position: absolute; 
     top: 35px;
     left: 45px;

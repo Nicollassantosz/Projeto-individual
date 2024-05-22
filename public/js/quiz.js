@@ -63,17 +63,17 @@ function selectAnswer(event) {
 
 function finishGame() {
     var totalQuestion = questions.length;
-    var performance = Math.floor((totalCorrect * 100) / totalQuestion);
+    var performance = totalCorrect / totalQuestion;
 
     var message = "";
 
-    if (performance >= 80) {
+    if (performance >= 8) {
         message = "Especialista em copas do mundo!";
-    } else if (performance >= 60) {
+    } else if (performance >= 6) {
         message = "É fã das copas do mundo";
-    } else if (performance >= 50) {
+    } else if (performance >= 5) {
         message = "Sabe um pouco mas pode conhecer mais dessa competição";
-    } else if (performance >= 30) {
+    } else if (performance >= 3) {
         message = "Sabe bem pouco sobre copa do mundo, pesquise um pouco mais sobre e garanto que não vai se arrepender";
     } else {
         message = "Você não conhece nada sobre a Copa do mundo. Olhe mais o site e fique atento a proxima";
@@ -115,9 +115,9 @@ var questions = [
     {
         question: "Qual foi o ano da primeira copa ganha pela seleção Brasileira?",
         answer: [
-            { text: "1950", correct: true },
+            { text: "1950", correct: false },
             { text: "1954", incorrect: false },
-            { text: "1958", correct: false },
+            { text: "1958", correct: true },
             { text: "1962", correct: false },
         ],
     },
@@ -136,7 +136,7 @@ var questions = [
             { text: "2 x 1", correct: false },
             { text: "1 x 0", correct: false },
             { text: "4 x 3", correct: false },
-            { text: "4 x 1", correct: true },
+            { text: "4 x 2", correct: true },
         ],
     },
     {
@@ -152,7 +152,7 @@ var questions = [
         question: "Qual foi a final da Copa do Mundo de 2010?",
         answer: [
             { text: "Espanha x Brasil", correct: false},
-            { text: "Espanha x ", correct: false },
+            { text: "Espanha x França", correct: false },
             { text: "Espanha x Holanda", correct: true },
             { text: "Espanha x Alemanha", correct: false },
         ],

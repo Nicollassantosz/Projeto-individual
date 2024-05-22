@@ -682,7 +682,7 @@ A final foi disputada em Londres, no Estádio de Wembley, e é lembrada pelo pol
     for(var index = lista_copas.length - 1; index >= 0 ;index --){
         div_msg.innerHTML += ` ${lista_copas[index]}, `
     }
-    div_msg.innerHTML += ` no total ${lista_copas.length} Copas do Mundo. Faltam ${ 21 - lista_copas.length} Copas para você conhecer.`
+    div_msg.innerHTML += ` no total ${lista_copas.length} Copas do Mundo. Faltam ${ 22 - lista_copas.length} Copas para você conhecer.`
 
 
 

@@ -56,7 +56,6 @@ li a:hover {
     transition: 0.5s;
 }
 /* TITULO*/
-
 .titulo {
     height: 100px;
     width: 100%;
@@ -65,6 +64,8 @@ li a:hover {
     justify-content: space-evenly;
     font-family: "Montserrat", sans-serif;
     font-size: 27px;
+    background-color: #01683b;
+    color: white;
 }
 
 
@@ -108,6 +109,7 @@ li a:hover {
 #fasedegrupos img {
     width: 380px;
     height: 250px;
+    border-radius: 20px;
 }
 
 
@@ -143,6 +145,7 @@ li a:hover {
 #mata_mata img {
     width: 380px;
     height: 250px;
+    border-radius: 20px;
 }
 
 
@@ -188,11 +191,13 @@ li a:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    
 }
 
 .imgs_abertura_estadio img {
     width: 300px;
     height: 200px;
+    border-radius: 20px;
 }
 
 .imgs_fechamento_estadio {
@@ -206,5 +211,6 @@ li a:hover {
 .imgs_fechamento_estadio img {
     width: 300px;
     height: 200px;
+    border-radius: 20px;
 }
 
