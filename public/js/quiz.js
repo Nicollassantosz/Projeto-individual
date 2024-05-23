@@ -63,7 +63,7 @@ function selectAnswer(event) {
 
 function finishGame() {
     var totalQuestion = questions.length;
-    var performance = totalCorrect / totalQuestion;
+    var performance = totalCorrect ;
 
     var message = "";
 

@@ -12,7 +12,7 @@ body {
     background-size: cover;
     background-position: center;
     background-color:  rgb(21, 94, 21);
-    color: rgb(21, 94, 21);
+    color: black;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -21,19 +21,13 @@ body {
     width: 100%;
 }
 
-#img_taca {
-    width: 220px;
-    height: 140px;
-
-  
-}
 button {
     cursor: pointer;
 }
 
 .container {
     background-color: white;
-    width: 900px;
+    width: 700px;
     border: 2px solid rgb(21, 94, 21);
     border-radius: 6px;
     padding: 16px;
@@ -42,7 +36,7 @@ button {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 340px;
 }
 
 .perguntas_container {
@@ -63,7 +57,6 @@ button {
 .respostas_container {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 16px;
 }
 
@@ -74,10 +67,10 @@ button {
 .button {
     background-color: white;
     border: 3px solid rgb(27, 121, 27);
-    color: rgb(21, 94, 21);
+    color: black;
     font-size: 16px;
     border-radius: 6px;
-    height: 48px;
+    height: 43px;
     padding: 0 28px;
     transition: filter 0.2s;
     font-family: "Montserrat", sans-serif;
@@ -133,5 +126,11 @@ button {
     color: white; 
     font-family: "Montserrat", sans-serif;
     font-size: 1.5em;
-    font-weight:lighter; 
+    font-weight:lighter;
+}
+
+.div_titulo{
+    width: 100px;
+    height: 150px;
+    align-self: flex-end;
 }
