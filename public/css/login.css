@@ -11,7 +11,7 @@
     position: relative;
     z-index: 0;
     display: flex;
-    background-image: url('C:/Users/Usuario/Documents/Site projeto individual/Projeto-individual/public/assets/imgs/Group 6 (2).png');
+    background-image: url('C:/Users/Aluno/Documents/Site projeto individual/Projeto-individual/public/assets/imgs/Group 6 (2).png');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -45,12 +45,21 @@
 
 .titulo_crie{
     color: #35b702;
-    padding: 15px;
+    padding: 10px;
     font-family: "Montserrat", sans-serif;
     width:200px;
     height:10px;
-    justify-self: center;
     align-self: center;
+}
+.subtitulo_crie{
+    color: #175001;
+    font-family: "Montserrat", sans-serif;
+    width:400px;
+    height:5px;
+    align-self: center;
+    font-size: 10px;
+    font-weight: 800;
+    margin-left: 20%;
 }
 
 .ipt{

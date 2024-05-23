@@ -51,7 +51,7 @@ function escolher() {
         <p>A Copa do Mundo de 2022 foi realizada no Catar,a primeira vez que o torneio foi realizado no Oriente Médio realizada no final do ano, devido às altas temperaturas durante os meses de verão no Catar.<br>
         A competição contou com 32 equipes nacionais de futebol de todo o mundo, competindo em uma série de estádios modernos, muitos dos quais foram construídos especialmente para o evento.
         </p>
-        <img src="C:/Users/Usuario/Documents/Site projeto individual/Projeto-individual/public/assets/imgs/2022fwc_square_portrait_1080x1080.webp" alt="Banner copa 2022"> `
+        <img src="C:/Users/Aluno/Documents/Site projeto individual/Projeto-individual/public/assets/imgs/2022fwc_square_portrait_1080x1080.webp" alt="Banner copa 2022"> `
         container_resumo2.innerHTML += `
         <img src="https://istoe.com.br/wp-content/uploads/2022/09/argentina-finalissima.jpg" alt="Banner copa 2022">   
         <p>
@@ -524,7 +524,7 @@ A final foi disputada em Londres, no Estádio de Wembley, e é lembrada pelo pol
         </p>
         <img src="https://www.lance.com.br/galerias/wp-content/uploads/2022/10/Just-Fontaine.jpeg" alt="Banner copa 2022"> `
         container_resumo4.innerHTML += `
-        <img src="C:/Users/Usuario/Documents/Site projeto individual/Projeto-individual/public/assets/imgs/6x1 tchecoslováquia.png" alt="Banner copa 2022"> 
+        <img src="C:/Users/Aluno/Documents/Site projeto individual/Projeto-individual/public/assets/imgs/6x1 tchecoslováquia.png" alt="Banner copa 2022"> 
         <p>
         O Brasil foi, em 1958, o primeiro país a vencer uma Copa do Mundo fora de seu continente.Em 2010 a Espanha repetiu o feito e ganhou a Copa na África do Sul.<br>
         A Argentina subestimou a Tchecoslováquia e perdeu de 6 a 1.Na volta da delegação, os torcedores lotaram o aeroporto e atiraram moedas de um peso nos jogadores.

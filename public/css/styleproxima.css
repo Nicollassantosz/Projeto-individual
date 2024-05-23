@@ -66,11 +66,12 @@ li a:hover {
     font-size: 27px;
     background-color: #01683b;
     color: white;
+    margin-top: 4%;
 }
 
 
 .subtitulo {
-    height: 70px;
+    height: 10px;
     width: 100%;
     display: flex;
     flex-flow: row;
@@ -78,7 +79,12 @@ li a:hover {
     justify-content: space-evenly;
     font-family: "Montserrat", sans-serif;
 }
-
+.subtitulo p{
+    margin-top: 45px;
+    /* text-decoration: underline;
+    color: blue;  */
+    font-weight: 500;
+}
 /* SEÇÃO FASE DE GRUPOS */
 #fasedegrupos {
     width: 100%;

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copa do mundo</title>
     <link rel="stylesheet" href="css/login.css">
+    <script src="js/login.js" defer></script>
 </head>
 
 <body>
@@ -16,9 +17,10 @@
           
             <div class="div_ipts">
                 <p class="titulo_crie">ENTRE NA SUA CONTA</p>
-                <input type="text" placeholder="    E-Mail" class="ipt">
-                <input type="text" placeholder="    Senha" class="ipt">
-                <a href="cadastro.html"><button class="button_2">Entrar</button></a>
+                <p class="subtitulo_crie">Entre para fazer o quiz e ver sua posição no ranking</p>
+                <input type="text" placeholder="    E-Mail" class="ipt" id="ipt_email">
+                <input type="text" placeholder="    Senha" class="ipt" id="ipt_senha">
+            <button class="button_2" onclick="entrar()">Entrar</button>
 
             </div>
             <div class="container_quadrado">
@@ -26,6 +28,7 @@
                 <p class="subtitulo">Cadastre-se para poder conhecer nosso site completo</p>
                 <a href="cadastro.html"><button class="entrar_verde">Cadastrar</button></a>
             </div>
+            <div id="div_erro"></div>
         </div>
     </div>
 
