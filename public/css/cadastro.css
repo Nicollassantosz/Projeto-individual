@@ -8,11 +8,11 @@
 }
 .container {
     width: 100%;
-    height: 550px;
+    height: 580px;
     position: relative;
     z-index: 0;
     display: flex;
-    background-image: url('C:/Users/Aluno/Documents/Site projeto individual/Projeto-individual/public/assets/imgs/Group 6 (2).png');
+    background-image: url('../assets/imgs/Group\ 6\ \(2\).png');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;

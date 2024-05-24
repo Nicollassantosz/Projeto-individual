@@ -5,16 +5,49 @@
     padding: 0;
     margin: 0;
 }
+body{
+    height: 720px;
+    width: 100%;
+    display: flex;
+}
 .container{
-    width: 30%;
-    height: 650px;
-    background-color: aqua;
+    width: 28%;
+    height: 720px;
+    background-color: #35b702;
     display: flex;
     text-align: center;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;    
+    gap: 40px;
 }
 
-.container button{
-    justify-content: center;
-margin-top: 20%;
+.button_voltar{
+    background-color:#35b702 ;
+    border: 1px solid white;
+    width: 130px;
+ height: 40px;
+ border-radius: 20px;
+ color: white;
+
+
+}
+
+.button_ranking{
+    background-color:#35b702 ;
+    border: 1px solid white;
+    width: 130px;
+ height: 40px;
+ border-radius: 20px;
+ color: white;
+ align-items: center;
+}
+.button_quiz{
+    background-color:#35b702 ;
+    border: 1px solid white;
+    width: 130px;
+ height: 40px;
+ border-radius: 20px;
+ color: white;
+ margin-top: 0%;
 }
