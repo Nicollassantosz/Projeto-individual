@@ -51,7 +51,7 @@ function escolher() {
         <p>A Copa do Mundo de 2022 foi realizada no Catar,a primeira vez que o torneio foi realizado no Oriente Médio realizada no final do ano, devido às altas temperaturas durante os meses de verão no Catar.<br>
         A competição contou com 32 equipes nacionais de futebol de todo o mundo, competindo em uma série de estádios modernos, muitos dos quais foram construídos especialmente para o evento.
         </p>
-        <img src="C:/Users/Aluno/Documents/Site projeto individual/Projeto-individual/public/assets/imgs/2022fwc_square_portrait_1080x1080.webp" alt="Banner copa 2022"> `
+        <img src="../public/assets/imgs/2022fwc_square_portrait_1080x1080.webp" alt="Banner copa 2022"> `
         container_resumo2.innerHTML += `
         <img src="https://istoe.com.br/wp-content/uploads/2022/09/argentina-finalissima.jpg" alt="Banner copa 2022">   
         <p>
@@ -555,7 +555,7 @@ A final foi disputada em Londres, no Estádio de Wembley, e é lembrada pelo pol
         </p>
         <img src="https://www.lance.com.br/galerias/wp-content/uploads/2020/09/S%C3%A1ndor-Kocsis-699x474.jpg" alt="Banner copa 2022"> `
         container_resumo4.innerHTML += `
-        <img src="image/2022fwc_square_portrait_1080x1080.webp" alt="Banner copa 2022"> 
+        <img src="https://conteudo.cbf.com.br/cdn/thumbs/910x455/201508/20150828103210_0.jpeg" alt="Banner copa 2022"> 
         <p>
         O clima do jogo em que o Brasil foi desclassificado pela Hungria foi tão pesado que a partida ganhou o nome de “A Batalha de Berna”.<br>
         A Copa de 1954 foi a primeira a ser televisionada, graças aos avanços locais da tecnologia. Mas foi só em 1970 que o evento completo foi transmitido globalmente.

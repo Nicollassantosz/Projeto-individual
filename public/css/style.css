@@ -87,7 +87,7 @@ li a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-color: rgba(0, 0, 0, 0.1);
     z-index: 2;
 }
@@ -123,6 +123,7 @@ li a:hover {
    
 }
 
+
 .countdown {
     font-size: 32px;
     color: white;
@@ -138,6 +139,16 @@ li a:hover {
     margin-left: 4%;
     
 }
+
+.div_contador p {
+    align-self: center;
+    display: flex;
+    margin-left: 7%;
+    font-size: 20px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
 
 
 
@@ -237,8 +248,9 @@ li a:hover {
 
 
 #span_cowndown {
-    font-size: 15px;
+    font-size: 14px;
     justify-content: space-around;
+    font-family: "Montserrat", sans-serif;
 }
 
 .quadrado {
@@ -263,6 +275,7 @@ li a:hover {
     width: 100%;
     height: 130px;
     background: rgb(21, 94, 21);
+    display: flex;
 }
 
 
@@ -495,3 +508,99 @@ transition: 1s;
 .alinhar{
     margin-top: 20px
 }
+
+.titulo_onu{
+    text-align: center;
+    display: flex;
+   justify-content: center;
+   font-family: "Montserrat", sans-serif;
+   font-size: 28px;
+   color: white;
+   background: rgb(37, 147, 37);
+   width: 100%;
+   height: 70px;
+   align-items: center;
+}
+
+
+
+.div_objetivo1{
+    max-width: 100%;
+    max-height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    background: white;
+    margin-bottom: 5%;
+    margin-top: 4%;
+}
+
+.div_objetivo1 p{
+    max-width: 100;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    flex-direction: row;
+    margin-right: 5%;
+    align-self: center;
+}
+
+.div_objetivo1 img{
+    width:100px;
+    height: 100px;   
+    background-size: cover;
+    margin-right: 3%;
+    margin-left: 7%;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+/* 
+footer */
+
+
+footer{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: rgb(30, 75, 56);
+}
+
+.imgs_footer{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(30, 75, 56);
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap:120px;    
+}
+
+.texto_footer{
+    font-family: "Montserrat", sans-serif;
+}
+
+.p_direitos{
+    margin-top: 10px;
+}
+.logo_footer{
+    height: 40px;
+    width: 80px;
+}
+.img_git{
+    height: 40px;
+    width: 40px;
+}
+.img_linkedin{
+    height: 30px;
+    width: 100px;
+}
+
