@@ -18,8 +18,104 @@
         <button class="button_ranking">Ranking</button>
         <a href="index.html"><button class="button_voltar">Voltar ao site</button></a>
     </div>
+    <div id="div_container">
+        <div class="div_titulo">
+            <p>RANKING</p>
+        </div>
+        <div class="div_kpi">
+            <div class="quadrado_kpi">
+               Quantas pessoas fizeram o quiz:<br>
 
+               <span class="numero_kpi">13</span>
+            </div>
+            <div class="quadrado_kpi">
+                Maior pontuação é:<br><br>
+                <span class="numero_kpi">8</span>
+            </div>
+            <div class="quadrado_kpi">
+                Menor pontuação é:<br><br>
+                <span class="numero_kpi">4</span>
+            </div>
+            <div class="quadrado_kpi">
+                A media de acertos é :<br><br>  
+                <span class="numero_kpi">6</span>
+            </div>
+        </div>
+        <div class="div_grafico">
+            <div class="quadrado_grafico">
+                
+                    <canvas id="myChart"></canvas>
+                
+            </div>
+            <div class="quadrado_grafico">
+                <canvas id="myChart2"></canvas>
+            </div>
+        </div>
+    </div>
 
 </body>
 
 </html>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // Primeiro gráfico
+    const ctx = document.getElementById('myChart');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['6°', '5°', '4°', '3°', '2°', '1°'],
+        datasets: [{
+          label: 'Gráfico 1',
+          data: [0 , 2, 4, 6, 8, 10],
+          backgroundColor: [
+            'yellow', 
+            'blue', 
+            'yellow',
+            'green', 
+            'purple',
+            'orange' 
+          ],
+          borderWidth: 3, 
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Segundo gráfico
+    const ctx2 = document.getElementById('myChart2');
+    new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: ['6°', '5°', '4°', '3°', '2°', '1°'],
+        datasets: [{
+          label: 'Gráfico 2',
+          data: [0 , 1, 2, 4, 5, 10],
+          backgroundColor: [
+            'red', 
+            'green', 
+            'blue',
+            'yellow', 
+            'purple',
+            'orange' 
+          ],
+          borderWidth: 3, 
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>

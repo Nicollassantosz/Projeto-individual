@@ -68,3 +68,6 @@ function cadastrar() {
   function sumirMensagem() {
     div_erro.style.display = "none";
   }
+
+
+
