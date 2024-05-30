@@ -6,6 +6,7 @@
     padding: 0;
     margin: 0;
 }
+
 .container {
     width: 100%;
     height: 580px;
@@ -22,7 +23,7 @@
 }
 
 .container_cadastro{
-    width: 700px;
+    width: 55%;
     height: 450px;
     background-color: white;
     align-self: center;
