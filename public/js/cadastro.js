@@ -19,6 +19,17 @@ function cadastrar() {
         alert('Preencha todos os campos');
 
       return false;
+    }else if(senhaVar.length <= 6){
+      alert('Senha fraca');
+
+      return false;
+
+
+    }else if(senhaVar != confirmacaoSenhaVar){
+      alert('Senhas diferentes');
+
+      return false;
+
     } else {
       setInterval(sumirMensagem, 5000);
     }

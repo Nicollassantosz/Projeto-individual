@@ -15,7 +15,7 @@ body{
 .container{
     width: 23%;
     height: 720px;
-    background-color: #298e01;
+    background-color: rgb(4, 59, 28);
     display: flex;
     text-align: center;
     justify-content: center;
@@ -25,7 +25,7 @@ body{
 }
 
 .button_voltar{
-    background-color:#35b702 ;
+    background-color:rgb(3, 91, 70);
     border: 1px solid white;
     width: 130px;
  height: 40px;
@@ -34,9 +34,13 @@ body{
 
 
 }
+.button_voltar:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
 
 .button_ranking{
-    background-color:#35b702 ;
+    background-color:rgb(3, 91, 70);
     border: 1px solid white;
     width: 130px;
  height: 40px;
@@ -44,20 +48,31 @@ body{
  color: white;
  align-items: center;
 }
+
+.button_ranking:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
 .button_quiz{
-    background-color:#35b702 ;
+    background-color:rgb(3, 91, 70);
     border: 1px solid white;
     width: 130px;
  height: 40px;
  border-radius: 20px;
  color: white;
  margin-top: 0%;
+ opacity: 1;
+}
+
+.button_quiz:hover{
+    cursor: pointer;
+    opacity: 0.7;
 }
 
 #div_container{
     width: 77%;
     height: 720px;
-    background-color: aqua;
     display: flex;
     text-align: center;
   flex-direction: column;
@@ -91,7 +106,7 @@ justify-content: center;
 
 .div_grafico{
     width: 100%;
-    height: 340px;
+    height: 330px;
     display: flex;
     flex-direction: row;
 gap: 30px;
@@ -101,9 +116,11 @@ background-color: rgb(255, 228, 193);
 }
 
 .quadrado_kpi{
+    margin-top: 2px;
     height: 100%;
     width: 20%;
     background-color: rgb(4, 59, 28);
+    border-radius: 15px;
 }
 
 .quadrado_grafico{
@@ -112,6 +129,7 @@ background-color: rgb(255, 228, 193);
     background-color: rgb(4, 65, 23);
     justify-content: center;
     display: flex;
+    border-radius: 15px;    
 } 
 
 #myChart{
