@@ -2,75 +2,74 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DASHBOARD | COPA DO MUNDO</title>
-    <link rel="stylesheet" href="css/dashboard.css">
-    <script src="js/dashboard.js"></script>
-    <link rel="stylesheet" href="css/stylegeral.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DASHBOARD | COPA DO MUNDO</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="js/dashboard.js"></script>
+  <link rel="stylesheet" href="css/stylegeral.css">
 </head>
 
 <body>
-    <div class="container">
-        <div>
-            <p>COPA DO MUNDO</p>
-        </div>
-        <a href="quiz.html"><button class="button_quiz">Quiz</button></a>
-        <button class="button_ranking">Ranking</button>
-        <a href="index.html"><button class="button_voltar">Voltar ao site</button></a>
+  <div class="container">
+    <div>
+      <p>COPA DO MUNDO</p>
     </div>
-    <div id="div_container">
-        <div class="div_titulo">
-            <p>RANKING</p>
-        </div>
-        <div class="div_kpi">
-            <div class="quadrado_kpi">
-               Quantas pessoas fizeram o quiz:<br>
+    <a href="quiz.html"><button class="button_quiz">Quiz</button></a>
+    <button class="button_ranking">Ranking</button>
+    <a href="index.html"><button class="button_voltar">Voltar ao site</button></a>
+  </div>
+  <div id="div_container">
+    <div class="div_titulo">
+      <p>RANKING</p>
+    </div>
+    <div class="div_kpi">
+      <div class="quadrado_kpi" id="kpi1">
+     
 
-               <span class="numero_kpi"></span>
-            </div>
-            <div class="quadrado_kpi">
-                Maior<br>pontuação<br>
-                <span class="numero_kpi">8</span>
-            </div>
-            <div class="quadrado_kpi">
-                Menor<br>pontuação<br>
-                <span class="numero_kpi">4</span>
-            </div>
-            <div class="quadrado_kpi">
-               Media<br> de acertos<br>  
-                <span class="numero_kpi">6</span>
-            </div>
-        </div>
-        <div class="div_grafico">
-            <div class="quadrado_grafico">
-                
-                    <canvas id="myChart"></canvas>
-                
-            </div>
-            <div class="quadrado_grafico">
-                <canvas id="myChart2"></canvas>
-            </div>
-        </div>
-        <footer>
-          <p class="p_direitos">&copy; 2024 Meu Site - Todos os direitos reservados</p>
-                  <div class="imgs_footer">
-                      
-                      <a href="index.html"><img class="logo_footer"
-                          src="../public/assets/imgs/Default_faa_um_imagem_de_um_logo_com_forma_de_uma_taa_da_copa_2-removebg-preview.png"
-                          alt=""></a>
-                          <p class="texto_footer">Para saber mais sobre meus trabalhos: </p>
-                      <a href="https://github.com/Nicollassantosz"><img class="img_git"
-                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1200px-GitHub_Invertocat_Logo.svg.png"
-                          alt=""></a>
-                          <a href="https://www.linkedin.com/in/nicollas-carvalho-dev/"><img class="img_linkedin"
-                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1280px-LinkedIn_Logo.svg.png"
-                          alt=""></a>
-                  </div>
-                 
-              </footer>
+      </div>
+      <div class="quadrado_kpi">
+        Maior<br>pontuação<br>
+        <span class="numero_kpi">8</span>
+      </div>
+      <div class="quadrado_kpi">
+        Menor<br>pontuação<br>
+        <span class="numero_kpi">4</span>
+      </div>
+      <div class="quadrado_kpi">
+        Media<br> de acertos<br>
+        <span class="numero_kpi">6</span>
+      </div>
     </div>
-  
+    <div class="div_grafico">
+      <div class="quadrado_grafico">
+
+        <canvas id="myChart"></canvas>
+
+      </div>
+      <div class="quadrado_grafico">
+        <canvas id="myChart2"></canvas>
+      </div>
+    </div>
+    <footer>
+      <p class="p_direitos">&copy; 2024 Meu Site - Todos os direitos reservados</p>
+      <div class="imgs_footer">
+
+        <a href="index.html"><img class="logo_footer"
+            src="/assets/imgs/Default_faa_um_imagem_de_um_logo_com_forma_de_uma_taa_da_copa_2-removebg-preview 4.svg"
+            alt=""></a>
+        <p class="texto_footer">Para saber mais sobre meus trabalhos: </p>
+        <a href="https://github.com/Nicollassantosz"><img class="img_git"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1200px-GitHub_Invertocat_Logo.svg.png"
+            alt=""></a>
+        <a href="https://www.linkedin.com/in/nicollas-carvalho-dev/"><img class="img_linkedin"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1280px-LinkedIn_Logo.svg.png"
+            alt=""></a>
+      </div>
+
+    </footer>
+  </div>
+
 </body>
 
 </html>
@@ -79,61 +78,96 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-    // Primeiro gráfico
-    const ctx = document.getElementById('myChart');
-    new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['6°', '5°', '4°', '3°', '2°', '1°'],
-        datasets: [{
-          label: 'Gráfico 1',
-          data: [0 , 2, 4, 6, 8, 10],
-          backgroundColor: [
-            'yellow', 
-            'blue', 
-            'yellow',
-            'green', 
-            'purple',
-            'orange' 
-          ],
-          borderWidth: 3, 
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
+  // Primeiro gráfico
+  const ctx = document.getElementById('myChart');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['6°', '5°', '4°', '3°', '2°', '1°'],
+      datasets: [{
+        label: 'Gráfico 1',
+        data: [0, 2, 4, 6, 8, 10],
+        backgroundColor: [
+          'yellow',
+          'blue',
+          'yellow',
+          'green',
+          'purple',
+          'orange'
+        ],
+        borderWidth: 3,
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
         }
       }
-    });
+    }
+  });
 
-    // Segundo gráfico
-    const ctx2 = document.getElementById('myChart2');
-    new Chart(ctx2, {
-      type: 'bar',
-      data: {
-        labels: ['6°', '5°', '4°', '3°', '2°', '1°'],
-        datasets: [{
-          label: 'Gráfico 2',
-          data: [0 , 1, 2, 4, 5, 10],
-          backgroundColor: [
-            'red', 
-            'green', 
-            'blue',
-            'yellow', 
-            'purple',
-            'orange' 
-          ],
-          borderWidth: 3, 
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
+  // Segundo gráfico
+  const ctx2 = document.getElementById('myChart2');
+  new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: ['6°', '5°', '4°', '3°', '2°', '1°'],
+      datasets: [{
+        label: 'Gráfico 2',
+        data: [0, 1, 2, 4, 5, 10],
+        backgroundColor: [
+          'red',
+          'green',
+          'blue',
+          'yellow',
+          'purple',
+          'orange'
+        ],
+        borderWidth: 3,
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
         }
       }
-    });
-  </script>
+    }
+  });
+
+
+  function obterDadosGrafico() {
+
+    fetch('/usuarios/kpi1', {method: "POST", headers:{"Content-Type": "application/json"}, body: JSON.stringify({tabela: 'tentativaQuiz'})})
+    .then(function (resposta) {
+      if (resposta.ok) {
+          resposta.json().then(function (dados) {
+            console.log("Dados recebidos: ", JSON.stringify(dados));
+            console.log(dados);
+
+            plotarGrafico_3(dados);
+          });
+        } else {
+          console.error('Nenhum dado encontrado na kpi1 ou erro na API');
+        }
+      })
+      .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      });
+  }
+
+  obterDadosGrafico()
+
+  function plotarGrafico_3(dados) {
+        console.log("Dados recebidos no plotar: ", JSON.stringify(dados));
+
+        console.log(dados)
+
+        let pontuacao = dados.map(item => item.Acertos)
+        kpi1.innerHTML += ` Quantas pessoas fizeram o quiz:<br>
+
+<span class="numero_kpi">${dados[0].QtPessoas}</span>`;
+
+        }
+</script>

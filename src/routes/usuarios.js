@@ -12,11 +12,16 @@ router.post("/autenticar", function (req, res) {
     usuarioController.autenticar(req, res);
 });
 
-var quizController = require("../controllers/quizController");
+// var quizController = require("../controllers/quizController");
 
 router.post("/finishGame", function (req, res) {
     usuarioController.finishGame(req, res);
 });
+
+router.post("/kpi1", function(req,res){
+    usuarioController.kpi1(req, res);
+});
+
 
 module.exports = router;
 

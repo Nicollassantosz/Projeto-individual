@@ -88,11 +88,13 @@ function finishGame() {
     }
     
     perguntaContainer.innerHTML = `<p class="mensagem_final">Você acertou ${totalCorrect} de ${totalQuestion} questões!<span>Resultado: ${message}</span></p> 
-    <button onclick="window.location.reload()" class="button">
-    Refazer quiz!
-    </button>`;
+    <a href="dashboard.html"><button class="button">
+    Ir para a Dashboard!
+    </button>
+    </a>`;
 
     
+
     nextButton.classList.add("hide");
 
    

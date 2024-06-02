@@ -33,8 +33,19 @@ function finishGame(quiz, id, pontos) {
     return database.executar(instrucaoSql1);
 }
 
+function kpi1(tabelaUser) {
+   
+    var instrucaoSql1 = `
+   
+    SELECT distinct(fkUsuario) as 'QtPessoas' from ${tabelaUser};`;''
+    
+    console.log("Executando as instrução SQL: \n" + instrucaoSql1);
+    return database.executar(instrucaoSql1);
+}
+
 module.exports = {
     autenticar,
     cadastrar,
-    finishGame
+    finishGame,
+    kpi1
 };
