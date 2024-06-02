@@ -12,4 +12,11 @@ router.post("/autenticar", function (req, res) {
     usuarioController.autenticar(req, res);
 });
 
+var quizController = require("../controllers/quizController");
+
+router.post("/finishGame", function (req, res) {
+    usuarioController.finishGame(req, res);
+});
+
 module.exports = router;
+

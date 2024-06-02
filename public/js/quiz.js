@@ -4,11 +4,19 @@ var respostaContainer = document.querySelector(".respostas_container");
 var quentionText = document.querySelector(".perguntas");
 var nextButton = document.querySelector(".next_quiz");
 
+
+
+
+let idQuiz = 1;
+
+var pontos = 0
+
 startButton.addEventListener("click", startJogo);
 nextButton.addEventListener("click", displayProximaPergunta);
 
 var currentQuestion = 0;
 var totalCorrect = 0;
+
 
 function startJogo() {
     startButton.classList.add("hide");
@@ -89,7 +97,69 @@ function finishGame() {
 
    
     nextButton.removeEventListener("click", displayProximaPergunta);
+
+    var id = sessionStorage.ID_USUARIO;
+    var idquiz = 1;
+    
+    
+    fetch("/usuarios/finishGame", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+           idServer: id,
+            idquiz: idquiz,
+            pontos: performance
+    
+        })
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO quiz()!")
+        if (resposta.ok) {
+            console.log(resposta);
+            
+    
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+                sessionStorage.id = json.id;
+                sessionStorage.idquiz = json.idquiz;
+                sessionStorage.pontos = json.pontos;
+    
+    
+    
+            });
+    
+        } else {
+            console.log("Houve um erro ao terminar o quiz!");
+    
+            resposta.text().then(texto => {
+                console.error(texto);
+    
+            });
+    
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+    
+    return false;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

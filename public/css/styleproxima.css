@@ -7,7 +7,7 @@
 
 /* TITULO*/
 .titulo {
-    height: 100px;
+    height: 35vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -16,11 +16,12 @@
     font-size: 27px;
     background-color: #01683b;
     color: white;
+    padding-bottom: -20px;
 }
 
 
 .subtitulo {
-    height: 10px;
+    height: 50px;
     width: 100%;
     display: flex;
     flex-flow: row;
@@ -29,7 +30,6 @@
     font-family: "Montserrat", sans-serif;
 }
 .subtitulo p{
-    margin-top: 45px;
     font-weight: 500;
 }
 /* SEÇÃO FASE DE GRUPOS */
