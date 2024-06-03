@@ -39,7 +39,7 @@ router.post("/grafico2", function(req,res){
 });
 
 router.post("/grafico1", function(req,res){
-    usuarioController.grafico2(req, res);
+    usuarioController.grafico1(req, res);
 });
 
 

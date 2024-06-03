@@ -87,29 +87,54 @@ fetch('/usuarios/grafico1', { method: "POST", headers: { "Content-Type": "applic
             new Chart(ctx, {
               type: 'line',
               data: {
-                labels: ['3° ' + dados[2].nome, '2° ' + dados[1].nome, '1° ' + dados[0].nome],
+                labels: ['5° ' + dados[4].nome,'4° ' + dados[3].nome,'3° ' + dados[2].nome, '2° ' + dados[1].nome, '1° ' + dados[0].nome],
                 datasets: [{
                   label: 'Ultimas Tentativas',
-                  data: [dados[2].pontos, dados[1].pontos, dados[0].pontos],
-                  backgroundColor: [
-                    'yellow',
-                    'blue',
-                    'yellow'
-                    // 'green',
-                    // 'purple',
-                    // 'orange'
+                  data: [dados[4].pontos,dados[3].pontos,dados[2].pontos, dados[1].pontos, dados[0].pontos],
+                  borderColor: [
+                '#35b702'
+                   
+        
                   ],
-                  borderWidth: 3,
+                  borderWidth: 4,
                 }]
               },
               options: {
-                scales: {
-                  y: {
-                    beginAtZero: true
-                  }
-                }
-              }
-            });
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks:{
+          color: 'white'
+          
+        }
+      },
+      x: {
+        ticks:{
+          color: 'white',
+          font: {
+            family: "Montserrat",
+            weight: 'bold'
+          }
+        }
+      }
+    },
+    
+    plugins: {
+      legend: {
+        labels: {
+          color: 'white', // Cor da legenda principal
+          font: {
+            family: "Montserrat",
+            weight: 'bold'
+          }
+  
+        }
+      },
+    
+   
+    }
+  }
+});
             
           });
         }
@@ -139,21 +164,47 @@ fetch('/usuarios/grafico1', { method: "POST", headers: { "Content-Type": "applic
                     // 'red',
                     // 'green',
                     // 'blue',
-                    'yellow',
-                    'purple',
-                    'orange'
+                   '#35b702'
                   ],
                   borderWidth: 3,
                 }]
               },
               options: {
-                scales: {
-                  y: {
-                    beginAtZero: true
-                  }
-                }
-              }
-            });
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks:{
+          color: 'white'
+          
+        }
+      },
+      x: {
+        ticks:{
+          color: 'white',
+          font: {
+            family: "Montserrat",
+            weight: 'bold'
+          }
+        }
+      }
+    },
+    
+    plugins: {
+      legend: {
+        labels: {
+          color: 'white', // Cor da legenda principal
+          font: {
+            family: "Montserrat",
+            weight: 'bold'
+          }
+  
+        }
+      },
+    
+   
+    }
+  }
+});
             
           });
         }

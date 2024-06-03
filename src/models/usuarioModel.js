@@ -92,15 +92,12 @@ function grafico1(tabelaUser) {
    
     var instrucaoSql1 = `
    
-    SELECT usuario.nome, fkUsuario, pontos
-    FROM (
-        SELECT fkUsuario, pontos
-        FROM ${tabelaUser}
-        ORDER BY idTentativa DESC
-        LIMIT 3
-    ) AS ultimas_tentativas
+
+SELECT usuario.nome, fkUsuario, pontos
+    FROM ${tabelaUser}
+        AS ultimas_tentativas
     JOIN usuario ON ultimas_tentativas.fkUsuario = usuario.idUsuario
-    ORDER BY pontos DESC;
+    ORDER BY idTentativa DESC LIMIT 5;
     `;
     
     console.log("Executando as instrução SQL: \n" + instrucaoSql1);
