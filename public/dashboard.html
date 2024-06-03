@@ -16,7 +16,6 @@
       <p>COPA DO MUNDO</p>
     </div>
     <a href="quiz.html"><button class="button_quiz">Quiz</button></a>
-    <button class="button_ranking">Ranking</button>
     <a href="index.html"><button class="button_voltar">Voltar ao site</button></a>
   </div>
   <div id="div_container">
@@ -25,20 +24,17 @@
     </div>
     <div class="div_kpi">
       <div class="quadrado_kpi" id="kpi1">
-     
+
 
       </div>
-      <div class="quadrado_kpi">
-        Maior<br>pontuação<br>
-        <span class="numero_kpi">8</span>
+      <div class="quadrado_kpi" id="kpi2">
+
       </div>
-      <div class="quadrado_kpi">
-        Menor<br>pontuação<br>
-        <span class="numero_kpi">4</span>
+      <div class="quadrado_kpi" id="kpi3">
+   
       </div>
-      <div class="quadrado_kpi">
-        Media<br> de acertos<br>
-        <span class="numero_kpi">6</span>
+      <div class="quadrado_kpi" id="kpi4">
+      
       </div>
     </div>
     <div class="div_grafico">
@@ -78,70 +74,102 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-  // Primeiro gráfico
-  const ctx = document.getElementById('myChart');
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: ['6°', '5°', '4°', '3°', '2°', '1°'],
-      datasets: [{
-        label: 'Gráfico 1',
-        data: [0, 2, 4, 6, 8, 10],
-        backgroundColor: [
-          'yellow',
-          'blue',
-          'yellow',
-          'green',
-          'purple',
-          'orange'
-        ],
-        borderWidth: 3,
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
 
-  // Segundo gráfico
-  const ctx2 = document.getElementById('myChart2');
-  new Chart(ctx2, {
-    type: 'bar',
-    data: {
-      labels: ['6°', '5°', '4°', '3°', '2°', '1°'],
-      datasets: [{
-        label: 'Gráfico 2',
-        data: [0, 1, 2, 4, 5, 10],
-        backgroundColor: [
-          'red',
-          'green',
-          'blue',
-          'yellow',
-          'purple',
-          'orange'
-        ],
-        borderWidth: 3,
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
+fetch('/usuarios/grafico1', { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ tabela: 'tentativaQuiz' }) })
+      .then(function (resposta) {
+        if (resposta.ok) {
+          resposta.json().then(function (dados) {
+            console.log("Dados recebidos: ", JSON.stringify(dados));
+            console.log(dados);
+
+            // Primeiro gráfico
+            const ctx = document.getElementById('myChart');
+            new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: ['3° ' + dados[2].nome, '2° ' + dados[1].nome, '1° ' + dados[0].nome],
+                datasets: [{
+                  label: 'Ultimas Tentativas',
+                  data: [dados[2].pontos, dados[1].pontos, dados[0].pontos],
+                  backgroundColor: [
+                    'yellow',
+                    'blue',
+                    'yellow'
+                    // 'green',
+                    // 'purple',
+                    // 'orange'
+                  ],
+                  borderWidth: 3,
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+            
+          });
         }
-      }
-    }
-  });
+      })
+      .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      });
+  
+
+  fetch('/usuarios/grafico2', { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ tabela: 'tentativaQuiz' }) })
+      .then(function (resposta) {
+        if (resposta.ok) {
+          resposta.json().then(function (dados) {
+            console.log("Dados recebidos: ", JSON.stringify(dados));
+            console.log(dados);
+
+            // Segundo gráfico
+            const ctx2 = document.getElementById('myChart2');
+            new Chart(ctx2, {
+              type: 'bar',
+              data: {
+                labels: ['3° ' + dados[2].nome, '2° ' + dados[1].nome, '1° '+ dados[0].nome],
+                datasets: [{
+                  label: 'Ranking',
+                  data: [dados[2].pontos, dados[1].pontos, dados[0].pontos],
+                  backgroundColor: [
+                    // 'red',
+                    // 'green',
+                    // 'blue',
+                    'yellow',
+                    'purple',
+                    'orange'
+                  ],
+                  borderWidth: 3,
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+            
+          });
+        }
+      })
+      .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      });
+
+  
 
 
   function obterDadosGrafico() {
 
-    fetch('/usuarios/kpi1', {method: "POST", headers:{"Content-Type": "application/json"}, body: JSON.stringify({tabela: 'tentativaQuiz'})})
-    .then(function (resposta) {
-      if (resposta.ok) {
+    fetch('/usuarios/kpi1', { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ tabela: 'tentativaQuiz' }) })
+      .then(function (resposta) {
+        if (resposta.ok) {
           resposta.json().then(function (dados) {
             console.log("Dados recebidos: ", JSON.stringify(dados));
             console.log(dados);
@@ -155,19 +183,100 @@
       .catch(function (error) {
         console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
       });
+
+    fetch('/usuarios/kpi2', { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ tabela: 'tentativaQuiz' }) })
+      .then(function (resposta) {
+        if (resposta.ok) {
+          resposta.json().then(function (dados2) {
+            console.log("Dados recebidos: ", JSON.stringify(dados2));
+            console.log(dados2);
+
+            plotarGrafico_4(dados2);
+          });
+        } else {
+          console.error('Nenhum dado encontrado na kpi1 ou erro na API');
+        }
+      })
+      .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      });
+
+      
+    fetch('/usuarios/kpi3', { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ tabela: 'tentativaQuiz' }) })
+      .then(function (resposta) {
+        if (resposta.ok) {
+          resposta.json().then(function (dados3) {
+            console.log("Dados recebidos: ", JSON.stringify(dados3));
+            console.log(dados3);
+
+            plotarGrafico_5(dados3);
+          });
+        } else {
+          console.error('Nenhum dado encontrado na kpi1 ou erro na API');
+        }
+      })
+      .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      });
+
+      fetch('/usuarios/kpi4', { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ tabela: 'tentativaQuiz' }) })
+      .then(function (resposta) {
+        if (resposta.ok) {
+          resposta.json().then(function (dados4) {
+            console.log("Dados recebidos: ", JSON.stringify(dados4));
+            console.log(dados4);
+
+            plotarGrafico_6(dados4);
+          });
+        } else {
+          console.error('Nenhum dado encontrado na kpi1 ou erro na API');
+        }
+      })
+      .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      });
   }
 
   obterDadosGrafico()
 
   function plotarGrafico_3(dados) {
-        console.log("Dados recebidos no plotar: ", JSON.stringify(dados));
+    console.log("Dados recebidos no plotar: ", JSON.stringify(dados));
 
-        console.log(dados)
+    console.log(dados)
 
-        let pontuacao = dados.map(item => item.Acertos)
-        kpi1.innerHTML += ` Quantas pessoas fizeram o quiz:<br>
+    kpi1.innerHTML += ` Quantas pessoas fizeram o quiz:<br>
 
 <span class="numero_kpi">${dados[0].QtPessoas}</span>`;
 
-        }
+  }
+
+  function plotarGrafico_4(dados2) {
+    console.log("Dados recebidos no plotar: ", JSON.stringify(dados2));
+
+    console.log(dados2)
+
+    kpi2.innerHTML += `Maior<br>pontuação<br>
+        <span class="numero_kpi">${dados2[0].Pontuacao}</span>`;
+
+  }
+
+  function plotarGrafico_5(dados3) {
+    console.log("Dados recebidos no plotar: ", JSON.stringify(dados3));
+
+    console.log(dados3)
+
+    kpi3.innerHTML += `Menor<br>pontuação<br>
+        <span class="numero_kpi">${dados3[0].menorPontuacao}</span>`;
+
+  }
+
+  function plotarGrafico_6(dados4) {
+    console.log("Dados recebidos no plotar: ", JSON.stringify(dados4));
+
+    console.log(dados4)
+
+    kpi4.innerHTML += `Media<br> de acertos<br>
+        <span class="numero_kpi">${dados4[0].media}</span>`;
+
+  }
 </script>

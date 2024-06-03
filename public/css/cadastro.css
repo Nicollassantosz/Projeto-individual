@@ -70,6 +70,11 @@
 
 }
 
+.entrar_verde:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
 
 
 
@@ -109,4 +114,9 @@
  height: 40px;
  border-radius: 20px;
  color: white;
+}
+
+.button_2:hover{
+    cursor: pointer;
+    opacity: 0.7;
 }

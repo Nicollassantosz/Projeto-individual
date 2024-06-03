@@ -127,6 +127,101 @@ function kpi1(req, res){
     });
 }   
 
+function kpi2(req, res){
+
+    let tabela = req.body.tabela;
+
+    usuarioModel.kpi2(tabela).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado da segunda pergunta!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as respostas: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}   
+
+function kpi3(req, res){
+
+    let tabela = req.body.tabela;
+
+    usuarioModel.kpi3(tabela).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado da segunda pergunta!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as respostas: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}   
+
+function kpi4(req, res){
+
+    let tabela = req.body.tabela;
+
+    usuarioModel.kpi4(tabela).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado da segunda pergunta!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as respostas: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}   
+
+
+function grafico2(req, res) {
+    var tabela = req.body.tabela;
+
+    usuarioModel.grafico2(tabela)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao finalizar o quiz! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+    
+}
+
+function grafico1(req, res) {
+    var tabela = req.body.tabela;
+
+    usuarioModel.grafico1(tabela)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao finalizar o quiz! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+    
+}
+
+
 
 
 
@@ -134,5 +229,10 @@ module.exports = {
     autenticar,
     cadastrar,
     finishGame,
-    kpi1
+    kpi1,
+    kpi2,
+    kpi3,
+    kpi4,
+    grafico2,
+    grafico1
 }

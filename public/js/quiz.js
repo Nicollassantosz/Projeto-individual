@@ -110,7 +110,7 @@ function finishGame() {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-           idServer: id,
+            idServer: id,
             idquiz: idquiz,
             pontos: performance
     

@@ -81,7 +81,10 @@
  color: white;
 }
 
-
+.button_2:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
 
 /* PARTE COLORIDA DO REDIRECIONAMENTO */
 
@@ -117,5 +120,10 @@
  border-radius: 20px;
  color: white;
 
+}
+
+.entrar_verde:hover{
+    cursor: pointer;
+    opacity: 0.7;
 }
 

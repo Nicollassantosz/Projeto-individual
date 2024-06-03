@@ -1,3 +1,4 @@
+
 var database = require("../database/config")
 
 function autenticar(email, senha) {
@@ -22,11 +23,11 @@ function cadastrar(nome, email, senha, telefone) {
     return database.executar(instrucaoSql);
 }
 
-function finishGame(quiz, id, pontos) {
+function finishGame(id, quiz, pontos) {
     console.log("ACESSEI O DASH MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function finishGame()", quiz, id, pontos);
     var instrucaoSql1 = `
     INSERT INTO  tentativaQuiz values
-    ('${quiz}','${id}', '${pontos}' )
+    (null, '${quiz}','${id}', '${pontos}' )
     `;
 
     console.log("Executando as instrução SQL: \n" + instrucaoSql1);
@@ -37,7 +38,70 @@ function kpi1(tabelaUser) {
    
     var instrucaoSql1 = `
    
-    SELECT distinct(fkUsuario) as 'QtPessoas' from ${tabelaUser};`;''
+    SELECT COUNT(distinct(fkUsuario)) as 'QtPessoas' from ${tabelaUser};`;
+    
+    console.log("Executando as instrução SQL: \n" + instrucaoSql1);
+    return database.executar(instrucaoSql1);
+}
+
+function kpi2(tabelaUser) {
+   
+    var instrucaoSql1 = `
+   
+    select max(pontos) as 'Pontuacao' from ${tabelaUser};`;
+    
+    console.log("Executando as instrução SQL: \n" + instrucaoSql1);
+    return database.executar(instrucaoSql1);
+}
+
+function kpi3(tabelaUser) {
+   
+    var instrucaoSql1 = `
+   
+    select min(pontos) as 'menorPontuacao' from ${tabelaUser};`;
+    
+    console.log("Executando as instrução SQL: \n" + instrucaoSql1);
+    return database.executar(instrucaoSql1);
+}
+
+
+function kpi4(tabelaUser) {
+   
+    var instrucaoSql1 = `
+   
+    SELECT truncate(avg(pontos),1) as 'media' from ${tabelaUser};`;
+    
+    console.log("Executando as instrução SQL: \n" + instrucaoSql1);
+    return database.executar(instrucaoSql1);
+}
+
+function grafico2(tabelaUser) {
+   
+    var instrucaoSql1 = `
+   
+    SELECT usuario.nome, fkUsuario, MAX(pontos) AS pontos
+    FROM ${tabelaUser} join usuario on fkUsuario = idUsuario
+    GROUP BY fkUsuario
+    ORDER BY pontos DESC;`;
+    
+    console.log("Executando as instrução SQL: \n" + instrucaoSql1);
+    return database.executar(instrucaoSql1);
+}
+
+function grafico1(tabelaUser) {
+   
+    var instrucaoSql1 = `
+   
+    SELECT usuario.nome, fkUsuario, pontos
+    FROM (
+        SELECT fkUsuario, pontos
+        FROM ${tabelaUser}
+        ORDER BY idTentativa DESC
+        LIMIT 3
+    ) AS ultimas_tentativas
+    JOIN usuario ON ultimas_tentativas.fkUsuario = usuario.idUsuario
+    ORDER BY pontos DESC;
+    `;
     
     console.log("Executando as instrução SQL: \n" + instrucaoSql1);
     return database.executar(instrucaoSql1);
@@ -47,5 +111,10 @@ module.exports = {
     autenticar,
     cadastrar,
     finishGame,
-    kpi1
+    kpi1,
+    kpi2,
+    kpi3,
+    kpi4,
+    grafico2,
+    grafico1
 };

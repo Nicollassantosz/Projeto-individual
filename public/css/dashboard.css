@@ -21,7 +21,7 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;    
-    gap: 40px;
+    gap: 100px;
 }
 
 .button_voltar{
@@ -39,20 +39,7 @@ body{
     opacity: 0.7;
 }
 
-.button_ranking{
-    background-color:rgb(3, 91, 70);
-    border: 1px solid white;
-    width: 130px;
- height: 40px;
- border-radius: 20px;
- color: white;
- align-items: center;
-}
 
-.button_ranking:hover{
-    cursor: pointer;
-    opacity: 0.7;
-}
 
 .button_quiz{
     background-color:rgb(3, 91, 70);
