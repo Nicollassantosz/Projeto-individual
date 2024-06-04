@@ -51,7 +51,7 @@ function escolher() {
         <p>A Copa do Mundo de 2022 foi realizada no Catar,a primeira vez que o torneio foi realizado no Oriente Médio realizada no final do ano, devido às altas temperaturas durante os meses de verão no Catar.<br>
         A competição contou com 32 equipes nacionais de futebol de todo o mundo, competindo em uma série de estádios modernos, muitos dos quais foram construídos especialmente para o evento.
         </p>
-        <img src="../public/assets/imgs/2022fwc_square_portrait_1080x1080.webp" alt="Banner copa 2022"> `
+        <img src="assets/imgs/2022fwc_square_portrait_1080x1080.webp" alt="Banner copa 2022"> `
         container_resumo2.innerHTML += `
         <img src="https://istoe.com.br/wp-content/uploads/2022/09/argentina-finalissima.jpg" alt="Banner copa 2022">   
         <p>
@@ -62,7 +62,7 @@ function escolher() {
         O artilheiro foi Mbappe, da seleção da França, com 8 gols marcados durante o torneio.
         Alguns dos jogadores mais destacados da Copa de 2022 incluíram nomes como Emiliano Martínez (Argentina), Gvardiol (Croácia), Di Maria (Argentina), e Amrabat (Marrocos), entre outros.
         </p>
-        <img src="https://www.atribuna.com.br/storage/Esportes/Copa_2022/img3450879512009.webp" alt="Banner copa 2022"> `
+        <img src="https://cloudfront-us-east-1.images.arcpublishing.com/newr7/A52PYUTYMZNFDIYPIZZGS22R2E.jpg" alt="Banner copa 2022"> `
         container_resumo4.innerHTML += `
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3ZD5Wya2nTfI6VhYePBjM8U97QjTa9NH5VLsSdo5LFw&s" alt="Banner copa 2022"> 
         <p>O estadio 974 que recebeu o Brasil nas quartas de final, na goleada por 4 a 1 sobre a Coreia,foi a primeira arena padrão FIFA completamente desmontável e reutilizável.<br>Tambem pela primeira vez na história da Copa do Mundo da FIFA™, o time de arbitragem teve mulheres.</p>`
@@ -524,7 +524,7 @@ A final foi disputada em Londres, no Estádio de Wembley, e é lembrada pelo pol
         </p>
         <img src="https://www.lance.com.br/galerias/wp-content/uploads/2022/10/Just-Fontaine.jpeg" alt="Banner copa 2022"> `
         container_resumo4.innerHTML += `
-        <img src="C:/Users/Aluno/Documents/Site projeto individual/Projeto-individual/public/assets/imgs/6x1 tchecoslováquia.png" alt="Banner copa 2022"> 
+        <img src="assets/imgs/6x1 tchecoslováquia.png" alt="Banner copa 2022"> 
         <p>
         O Brasil foi, em 1958, o primeiro país a vencer uma Copa do Mundo fora de seu continente.Em 2010 a Espanha repetiu o feito e ganhou a Copa na África do Sul.<br>
         A Argentina subestimou a Tchecoslováquia e perdeu de 6 a 1.Na volta da delegação, os torcedores lotaram o aeroporto e atiraram moedas de um peso nos jogadores.

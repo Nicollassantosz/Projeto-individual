@@ -53,9 +53,6 @@
 }
 
 
-
-
-
 /*CONTADOR */
 
 
@@ -226,7 +223,7 @@
 }
 
 
-/*SEÇÃO EVENTO POPULAR */
+
 
 .titulo_popular_center {
     display: flex;
@@ -237,7 +234,6 @@
 }
 
 
-/*DIV DE TODOS OS CARDS*/
 .cards {
     display: flex;
     flex-direction: row;
@@ -245,7 +241,6 @@
 }
 
 
-/*DIV DOS CARD INDIVIDUAL*/
 .card {
     display: flex;
     width: 200px;
@@ -257,7 +252,7 @@
 
 }
 
-/*Parte da frente do card e de tras*/
+
 .front {
     color: #f0f0f0;
     display: flex;
@@ -419,6 +414,7 @@ transition: 1s;
     background: url('../assets/imgs/Group\ 5.png');
     background-size: cover;
     background-position: top;
+    padding: 3px;
 }
 
 .front2,
@@ -430,6 +426,7 @@ transition: 1s;
     background: url('../assets/imgs/Group\ 4.png');
     background-size: cover;
     background-position: center;
+    padding: 3px;
 }
 
 .front3,
@@ -441,6 +438,7 @@ transition: 1s;
     background: url('../assets/imgs/Group\ 1.png');
     background-size: cover;
     background-position: bottom;
+    padding: 3px;
 }
 
 .front4,
@@ -451,6 +449,7 @@ transition: 1s;
     backface-visibility: hidden;
     background: url('../assets/imgs/Group\ 3.png');
     background-size: cover;
+    padding: 3px;
 }
 
 /* ALINHAR TITULO DO CARD*/

@@ -30,7 +30,12 @@ function cadastrar() {
 
       return false;
 
-    } else {
+    }else if(telefoneVar.length > 11 ){
+      alert('Telefone com muitos números. Insira o telefone de acordo com o exemplo');
+
+      return false;
+
+    }  else {
       setInterval(sumirMensagem, 5000);
     }
 
@@ -60,7 +65,7 @@ function cadastrar() {
 
           setTimeout(() => {
             window.location = "login.html";
-          }, "2000");
+          }, "1000");
 
           limparFormulario();
   

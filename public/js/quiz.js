@@ -150,21 +150,6 @@ function finishGame() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var questions = [
     {
         question: "Quem é o maior artilheiro da história das copas do mundo?",

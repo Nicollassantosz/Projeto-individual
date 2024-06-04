@@ -89,7 +89,7 @@ fetch('/usuarios/grafico1', { method: "POST", headers: { "Content-Type": "applic
               data: {
                 labels: ['5° ' + dados[4].nome,'4° ' + dados[3].nome,'3° ' + dados[2].nome, '2° ' + dados[1].nome, '1° ' + dados[0].nome],
                 datasets: [{
-                  label: 'Ultimas Tentativas',
+                  label: 'Últimas Tentativas do Quiz',
                   data: [dados[4].pontos,dados[3].pontos,dados[2].pontos, dados[1].pontos, dados[0].pontos],
                   borderColor: [
                 '#35b702'
@@ -326,7 +326,7 @@ fetch('/usuarios/grafico1', { method: "POST", headers: { "Content-Type": "applic
 
     console.log(dados4)
 
-    kpi4.innerHTML += `Media<br> de acertos<br>
+    kpi4.innerHTML += `Média<br> de acertos<br>
         <span class="numero_kpi">${dados4[0].media}</span>`;
 
   }

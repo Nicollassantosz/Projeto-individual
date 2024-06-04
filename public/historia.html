@@ -10,21 +10,29 @@
     <script src="js/historia.js"></script>
 </head>
 
-<body>
+<body onload="validarSessao()">
 
     <div class="navbar">
         <img id="logonavbar"
-            src="assets/imgs/Default_faa_um_imagem_de_um_logo_com_forma_de_uma_taa_da_copa_2-removebg-preview 4.svg" alt="">
+            src="assets/imgs/Default_faa_um_imagem_de_um_logo_com_forma_de_uma_taa_da_copa_2-removebg-preview.png"
+            alt="">
         <div id="text_navbar">
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="historia.html" id="ipt_atual">HISTÓRIA</a></li>
+                <li><a href="index.html" id="ipt_atual">HOME</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
                 <li><a href="proximacopa.html">COPA DO MUNDO 2026</a></li>
                 <li><a href="sobre.html">SOBRE</a></li>
-                <li class="login"><a href="cadastro.html">LOGIN</a></li>
+                <li></li>
+                <li></li>
+                <li class="login" id="entrar"><a href="login.html">LOGIN</a></li>
+                <li class="login" id="ola"><a href="index.html"></a></li>
+                <li class="login" id="dash"><a href="dashboard.html">DASHBOARD</a></li>
+                <li class="sair"  id="sair"onclick="limpar()">SAIR</li>
             </ul>
+        
         </div>
     </div>
+
     <div class="container_home">
         <div class="comeco">
             <span>COMO COMEÇOU?</span>
@@ -79,7 +87,7 @@
                 <div class="imgs_footer">
                     
                     <a href="index.html"><img class="logo_footer"
-                        src="/assets/imgs/Default_faa_um_imagem_de_um_logo_com_forma_de_uma_taa_da_copa_2-removebg-preview.png"
+                        src="assets/imgs/Default_faa_um_imagem_de_um_logo_com_forma_de_uma_taa_da_copa_2-removebg-preview.png"
                         alt=""></a>
                         <p class="texto_footer">Para saber mais sobre meus trabalhos: </p>
                     <a href="https://github.com/Nicollassantosz"><img class="img_git"
@@ -94,3 +102,32 @@
 </body>
 
 </html>
+
+
+<script>
+    function validarSessao(){
+    var nome = sessionStorage.NOME_USUARIO;
+        console.log(nome)
+        if (nome != undefined) {
+            document.getElementById("entrar").style.display = "none";
+            ola.innerHTML = `OLÁ, ${nome.toUpperCase() }`;
+            document.getElementById("ola").style.display = "block";
+            document.getElementById("sair").style.display = "block";
+            document.getElementById("dash").style.display = "block";
+          
+}else{
+    document.getElementById("ola").style.display = "none";
+document.getElementById("entrar").style.display = "block";
+document.getElementById("sair").style.display = "none";
+document.getElementById("dash").style.display = "none";
+}
+}   
+
+function limpar(){
+sessionStorage.clear();
+document.getElementById("ola").style.display = "none";
+document.getElementById("entrar").style.display = "block";
+document.getElementById("sair").style.display = "none";
+document.getElementById("dash").style.display = "none";
+}
+    </script>

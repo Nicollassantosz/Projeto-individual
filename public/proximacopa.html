@@ -9,20 +9,26 @@
     <link rel="stylesheet" href="css/stylegeral.css">
 </head>
 
-<body>
-    <!-- NAVBAR -->
+<body onload="validarSessao()">
+
     <div class="navbar">
         <img id="logonavbar"
-            src="assets/imgs/Default_faa_um_imagem_de_um_logo_com_forma_de_uma_taa_da_copa_2-removebg-preview 4.svg"
+            src="assets/imgs/Default_faa_um_imagem_de_um_logo_com_forma_de_uma_taa_da_copa_2-removebg-preview.png"
             alt="">
         <div id="text_navbar">
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="historia.html">HISTÓRIA</a></li>
-                <li><a href="proximacopa.html" id="ipt_atual">COPA DO MUNDO 2026</a></li>
+                <li><a href="index.html" id="ipt_atual">HOME</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="proximacopa.html">COPA DO MUNDO 2026</a></li>
                 <li><a href="sobre.html">SOBRE</a></li>
-                <li class="login"><a href="login.html">LOGIN</a></li>
+                <li></li>
+                <li></li>
+                <li class="login" id="entrar"><a href="login.html">LOGIN</a></li>
+                <li class="login" id="ola"><a href="index.html"></a></li>
+                <li class="login" id="dash"><a href="dashboard.html">DASHBOARD</a></li>
+                <li class="sair"  id="sair"onclick="limpar()">SAIR</li>
             </ul>
+        
         </div>
     </div>
     <div class="titulo">
@@ -47,11 +53,11 @@
                 Temos uma imagem ao lado para ilustrar como ficariam a quantidade de times e grupos.
             </p>
         </div>
-        <img src="../public/assets/imgs/image 3.png"
+        <img src="assets/imgs/image 3.png"
             alt="">
     </div>
     <div id="mata_mata">
-        <img src="../public/assets/imgs/mata-mata.png"
+        <img src="assets/imgs/mata-mata.png"
             alt="">
         <div class="texto_mata_mata">
             <span>MATA-MATA</span>
@@ -73,9 +79,9 @@
         <p>5 jogos nessa fase contando com a final</p>
     </div>
     <div class="imgs_onde_copa">
-        <img src="../public/assets/imgs/2026 banner copa.png"
+        <img src="assets/imgs/2026 banner copa.png"
             alt="" class="img_logo">
-        <img src="../public/assets/imgs/mapa copa do mundo 2026.webp"
+        <img src="assets/imgs/mapa copa do mundo 2026.webp"
             alt="" class="img_local">
     </div>
   <div class="titulo">
@@ -99,7 +105,7 @@
             <div class="imgs_footer">
                 
                 <a href="index.html"><img class="logo_footer"
-                    src="../public/assets/imgs/Default_faa_um_imagem_de_um_logo_com_forma_de_uma_taa_da_copa_2-removebg-preview.png"
+                    src="assets/imgs/Default_faa_um_imagem_de_um_logo_com_forma_de_uma_taa_da_copa_2-removebg-preview.png"
                     alt=""></a>
                     <p class="texto_footer">Para saber mais sobre meus trabalhos: </p>
                 <a href="https://github.com/Nicollassantosz"><img class="img_git"
@@ -114,3 +120,32 @@
 </body>
 
 </html>
+
+
+<script>
+   function validarSessao(){
+    var nome = sessionStorage.NOME_USUARIO;
+        console.log(nome)
+        if (nome != undefined) {
+            document.getElementById("entrar").style.display = "none";
+            ola.innerHTML = `OLÁ, ${nome.toUpperCase() }`;
+            document.getElementById("ola").style.display = "block";
+            document.getElementById("sair").style.display = "block";
+            document.getElementById("dash").style.display = "block";
+          
+}else{
+    document.getElementById("ola").style.display = "none";
+document.getElementById("entrar").style.display = "block";
+document.getElementById("sair").style.display = "none";
+document.getElementById("dash").style.display = "none";
+}
+}   
+
+function limpar(){
+sessionStorage.clear();
+document.getElementById("ola").style.display = "none";
+document.getElementById("entrar").style.display = "block";
+document.getElementById("sair").style.display = "none";
+document.getElementById("dash").style.display = "none";
+}
+    </script>

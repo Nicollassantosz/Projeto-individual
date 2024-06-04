@@ -91,8 +91,6 @@ function grafico2(tabelaUser) {
 function grafico1(tabelaUser) {
    
     var instrucaoSql1 = `
-   
-
 SELECT usuario.nome, fkUsuario, pontos
     FROM ${tabelaUser}
         AS ultimas_tentativas
