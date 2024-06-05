@@ -306,7 +306,7 @@ fetch('/usuarios/grafico1', { method: "POST", headers: { "Content-Type": "applic
 
     console.log(dados2)
 
-    kpi2.innerHTML += `Maior<br>pontuação<br>
+    kpi2.innerHTML += `Maior pontuação de<br> todos os usuarios<br>
         <span class="numero_kpi">${dados2[0].Pontuacao}</span>`;
 
   }
@@ -316,7 +316,7 @@ fetch('/usuarios/grafico1', { method: "POST", headers: { "Content-Type": "applic
 
     console.log(dados3)
 
-    kpi3.innerHTML += `Menor<br>pontuação<br>
+    kpi3.innerHTML += `Menor pontuação de<br> todos os usuarios<br>
         <span class="numero_kpi">${dados3[0].menorPontuacao}</span>`;
 
   }
@@ -326,7 +326,7 @@ fetch('/usuarios/grafico1', { method: "POST", headers: { "Content-Type": "applic
 
     console.log(dados4)
 
-    kpi4.innerHTML += `Média<br> de acertos<br>
+    kpi4.innerHTML += `Média<br> de acertos no geral<br>
         <span class="numero_kpi">${dados4[0].media}</span>`;
 
   }
