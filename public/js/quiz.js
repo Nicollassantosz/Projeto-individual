@@ -1,25 +1,24 @@
-var startButton = document.querySelector(".start_quiz");
+var botaocomecar = document.querySelector(".start_quiz");
 var perguntaContainer = document.querySelector(".perguntas_container");
 var respostaContainer = document.querySelector(".respostas_container");
-var quentionText = document.querySelector(".perguntas");
-var nextButton = document.querySelector(".next_quiz");
+var textoquestao = document.querySelector(".perguntas");
+var proximabotao = document.querySelector(".next_quiz");
 
 
 
 
-let idQuiz = 1;
+var idQuiz = 1;
 
-var pontos = 0
 
-startButton.addEventListener("click", startJogo);
-nextButton.addEventListener("click", displayProximaPergunta);
+botaocomecar.addEventListener("click", startJogo);
+proximabotao.addEventListener("click", displayProximaPergunta);
 
-var currentQuestion = 0;
-var totalCorrect = 0;
+var questaoatual = 0;
+var pontuacao = 0;
 
 
 function startJogo() {
-    startButton.classList.add("hide");
+    botaocomecar.classList.add("hide");
     perguntaContainer.classList.remove("hide");
     displayProximaPergunta();
 }
@@ -29,81 +28,80 @@ function displayProximaPergunta() {
         respostaContainer.removeChild(respostaContainer.firstChild);
     }
 
-    if (currentQuestion === questions.length) {
+    if (questaoatual === questoes.length) {
         return finishGame();
     }
+ 
+    proximabotao.classList.add("hide");
 
-    document.body.removeAttribute("class");
-    nextButton.classList.add("hide");
+        textoquestao.textContent = questoes[questaoatual].question;
+        questoes[questaoatual].answer.forEach(answer => {
+            var novaquestao = document.createElement("button");
+            novaquestao.classList.add("button", "answer");
+            novaquestao.textContent = answer.text;
+            if (answer.correct) {
+                novaquestao.dataset.correct = answer.correct;
+            }
+            respostaContainer.appendChild(novaquestao);
 
-    quentionText.textContent = questions[currentQuestion].question;
-    questions[currentQuestion].answer.forEach(answer => {
-        var newAnswer = document.createElement("button");
-        newAnswer.classList.add("button", "answer");
-        newAnswer.textContent = answer.text;
-        if (answer.correct) {
-            newAnswer.dataset.correct = answer.correct;
-        }
-        respostaContainer.appendChild(newAnswer);
+            novaquestao.addEventListener("click", selecionequestao);
+        });
+    }
 
-        newAnswer.addEventListener("click", selectAnswer);
-    });
-}
+function selecionequestao(event) {
+    var questaoclick = event.target;
 
-function selectAnswer(event) {
-    var answerClicked = event.target;
-
-    if (answerClicked.dataset.correct) {
-        answerClicked.classList.add("correct");
-        totalCorrect++;
+    if (questaoclick.dataset.correct) {
+        questaoclick.classList.add("correct");
+        pontuacao++;
     } else {
-        answerClicked.classList.add("incorrect");
+        questaoclick.classList.add("incorrect");
     }
 
     document.querySelectorAll(".answer").forEach(button => {
-        if (button !== answerClicked) {
+        if (button !== questaoclick) {
             button.disabled = true;
         }
     });
-    nextButton.classList.remove("hide");
-    currentQuestion++;
+    proximabotao.classList.remove("hide");
+    questaoatual++;
 }
 
 function finishGame() {
-    var totalQuestion = questions.length;
-    var performance = totalCorrect ;
+    var totalquestoes = questoes.length;
+    var performance = pontuacao;
 
-    var message = "";
+    var msg = "";
 
     if (performance >= 8) {
-        message = "Especialista em copas do mundo!";
+        msg = "Especialista em copas do mundo! Parabéns! Olhe se entrou no pódio";
     } else if (performance >= 6) {
-        message = "É fã das copas do mundo";
+        msg = "É fã das copas do mundo, foi bem";
     } else if (performance >= 5) {
-        message = "Sabe um pouco mas pode conhecer mais dessa competição";
+        msg = "Sabe um pouco mas pode conhecer mais dessa competição, garanto que vai gostar";
     } else if (performance >= 3) {
-        message = "Sabe bem pouco sobre copa do mundo, pesquise um pouco mais sobre e garanto que não vai se arrepender";
+        msg = "Sabe bem pouco sobre copa do mundo, pesquise um pouco mais sobre e garanto que não vai se arrepender";
     } else {
-        message = "Você não conhece nada sobre a Copa do mundo. Olhe mais o site e fique atento a proxima";
+        msg = "Você não conhece quase nada sobre Copa do mundo. Conheça meu site e tente o quiz novamente";
     }
-    
-    perguntaContainer.innerHTML = `<p class="mensagem_final">Você acertou ${totalCorrect} de ${totalQuestion} questões!<span>Resultado: ${message}</span></p> 
+
+    perguntaContainer.innerHTML = `<p class="mensagem_final">Você acertou ${pontuacao} de ${totalquestoes} questões!<span>Resultado: ${msg}</span></p> 
     <a href="dashboard.html"><button class="button">
     Ir para a Dashboard!
     </button>
     </a>`;
 
-    
 
-    nextButton.classList.add("hide");
 
-   
-    nextButton.removeEventListener("click", displayProximaPergunta);
+    proximabotao.classList.add("hide");
+
+
+    proximabotao.removeEventListener("click", displayProximaPergunta);
 
     var id = sessionStorage.ID_USUARIO;
     var idquiz = 1;
-    
-    
+
+
     fetch("/usuarios/finishGame", {
         method: "POST",
         headers: {
@@ -113,44 +111,44 @@ function finishGame() {
             idServer: id,
             idquiz: idquiz,
             pontos: performance
-    
+
         })
     }).then(function (resposta) {
         console.log("ESTOU NO THEN DO quiz()!")
         if (resposta.ok) {
             console.log(resposta);
-            
-    
+
+
             resposta.json().then(json => {
                 console.log(json);
                 console.log(JSON.stringify(json));
                 sessionStorage.id = json.id;
                 sessionStorage.idquiz = json.idquiz;
                 sessionStorage.pontos = json.pontos;
-    
-    
-    
+
+
+
             });
-    
+
         } else {
             console.log("Houve um erro ao terminar o quiz!");
-    
+
             resposta.text().then(texto => {
                 console.error(texto);
-    
+
             });
-    
+
         }
     }).catch(function (erro) {
         console.log(erro);
     })
-    
+
     return false;
 }
 
 
 
-var questions = [
+var questoes = [
     {
         question: "Quem é o maior artilheiro da história das copas do mundo?",
         answer: [
@@ -167,7 +165,7 @@ var questions = [
             { text: "1986", correct: true },
             { text: "1990", correct: false },
             { text: "1970", correct: false },
-        ],  
+        ],
     },
     {
         question: "Qual foi o ano da primeira copa ganha pela seleção Brasileira?",
@@ -184,7 +182,7 @@ var questions = [
             { text: "Nesta", correct: false },
             { text: "Cannavaro", correct: false },
             { text: "Materazzi", correct: true },
-            { text: "Pirlo", correct:  false},
+            { text: "Pirlo", correct: false },
         ],
     },
     {
@@ -208,7 +206,7 @@ var questions = [
     {
         question: "Qual foi a final da Copa do Mundo de 2010?",
         answer: [
-            { text: "Espanha x Brasil", correct: false},
+            { text: "Espanha x Brasil", correct: false },
             { text: "Espanha x França", correct: false },
             { text: "Espanha x Holanda", correct: true },
             { text: "Espanha x Alemanha", correct: false },

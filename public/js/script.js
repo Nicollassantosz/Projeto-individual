@@ -11,7 +11,7 @@ function atualizarcontador() {
     var segundos = Math.floor((temporestante % (1000 * 60)) / 1000);
 
   
-    document.getElementById("countdown").innerHTML = `<div class="align"><div class = "quadrado">${dias}</div> :  <div class = "quadrado">${horas}</div>  : <div class = "quadrado">${minutos}</div>  : <div class = "quadrado">${segundos}</div> </div> 
+    n_contador.innerHTML = `<div class="align"><div class = "quadrado">${dias}</div> :  <div class = "quadrado">${horas}</div>  : <div class = "quadrado">${minutos}</div>  : <div class = "quadrado">${segundos}</div> </div> 
  <div class = "retangulo"> <div class="kpi_contador"> <span id="span_cowndown">DIAS</span>   <span id="span_cowndown">HORAS</span><span id="span_cowndown">  MIN</span><span id="span_cowndown">  SEG </span> </div> `;
 }
 
