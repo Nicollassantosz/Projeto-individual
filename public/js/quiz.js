@@ -45,7 +45,7 @@ function displayProximaPergunta() {
             respostaContainer.appendChild(novaquestao);
 
             novaquestao.addEventListener("click", selecionequestao);
-        });
+        })
     }
 
 function selecionequestao(event) {
