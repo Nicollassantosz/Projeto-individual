@@ -222,7 +222,7 @@ var questoes = [
         ],
     },
     {
-        question: "Quantas Copas do mundo femininas a seleção feminina do Brasil tem?",
+        question: "Quantas Copas do mundo a seleção feminina do Brasil tem?",
         answer: [
             { text: "5", correct: false },
             { text: "4", correct: false },

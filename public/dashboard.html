@@ -13,14 +13,15 @@
 <body>
   <div class="container">
     <div>
-      <p>COPA DO MUNDO</p>
+      <p>COPA DO MUNDO<br><br>
+    Faça o quiz para aparecer na Dashboard</p>
     </div>
     <a href="quiz.html"><button class="button_quiz">Quiz</button></a>
     <a href="index.html"><button class="button_voltar">Voltar ao site</button></a>
   </div>
   <div id="div_container">
     <div class="div_titulo">
-      <p>RANKING</p>
+      <p>DASHBOARD</p>
     </div>
     <div class="div_kpi">
       <div class="quadrado_kpi" id="kpi1">
@@ -89,7 +90,7 @@ fetch('/usuarios/grafico1', { method: "POST", headers: { "Content-Type": "applic
               data: {
                 labels: ['5° ' + dados[4].nome,'4° ' + dados[3].nome,'3° ' + dados[2].nome, '2° ' + dados[1].nome, '1° ' + dados[0].nome],
                 datasets: [{
-                  label: 'Últimas Tentativas do Quiz',
+                  label: 'ÚLTIMAS TENTATIVAS DO QUIZ',
                   data: [dados[4].pontos,dados[3].pontos,dados[2].pontos, dados[1].pontos, dados[0].pontos],
                   borderColor: [
                 '#35b702'
@@ -158,7 +159,7 @@ fetch('/usuarios/grafico1', { method: "POST", headers: { "Content-Type": "applic
               data: {
                 labels: ['3° ' + dados[2].nome, '2° ' + dados[1].nome, '1° '+ dados[0].nome],
                 datasets: [{
-                  label: 'Ranking',
+                  label: 'PÓDIO',
                   data: [dados[2].pontos, dados[1].pontos, dados[0].pontos],
                   backgroundColor: [
                    
