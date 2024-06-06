@@ -151,7 +151,7 @@ fetch('/usuarios/grafico1', { method: "POST", headers: { "Content-Type": "applic
             console.log("Dados recebidos: ", JSON.stringify(dados));
             console.log(dados);
 
-            // Segundo gráfico
+          
             const ctx2 = document.getElementById('myChart2');
             new Chart(ctx2, {
               type: 'bar',
@@ -161,9 +161,7 @@ fetch('/usuarios/grafico1', { method: "POST", headers: { "Content-Type": "applic
                   label: 'Ranking',
                   data: [dados[2].pontos, dados[1].pontos, dados[0].pontos],
                   backgroundColor: [
-                    // 'red',
-                    // 'green',
-                    // 'blue',
+                   
                    '#35b702'
                   ],
                   borderWidth: 3,
@@ -192,7 +190,7 @@ fetch('/usuarios/grafico1', { method: "POST", headers: { "Content-Type": "applic
     plugins: {
       legend: {
         labels: {
-          color: 'white', // Cor da legenda principal
+          color: 'white', 
           font: {
             family: "Montserrat",
             weight: 'bold'

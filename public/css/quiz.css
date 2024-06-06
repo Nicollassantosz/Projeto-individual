@@ -33,10 +33,10 @@ button {
     padding: 16px;
     box-shadow: 0 0 2px 2px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 340px;
+    height: auto;
 }
 
 .perguntas_container {
